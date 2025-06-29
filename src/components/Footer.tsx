@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
           <div className="text-center md:text-left text-sm text-gray-400 mb-4 md:mb-0">
-            <p>&copy; 2024 Zanist. All rights reserved. | <Link to="/privacy" className="hover:text-white">Privacy Policy</Link> | <Link to="/terms" className="hover:text-white">Terms of Service</Link></p>
+            <p>&copy; 2024 Zanist. All rights reserved. | <Link to="/privacy" className="hover:text-white">Privacy Policy</Link> | <Link to="/terms" className=\"hover:text-white">Terms of Service</Link></p>
           </div>
           
           {/* Additional Bolt Badge in Footer */}
