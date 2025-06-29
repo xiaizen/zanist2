@@ -15,7 +15,8 @@ import {
   Bell,
   Globe,
   Star,
-  TrendingUp
+  TrendingUp,
+  BookOpen
 } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { sampleEssays } from '../data/sampleEssays';
@@ -78,20 +79,21 @@ const HomePage: React.FC = () => {
           <div className="flex items-center justify-between py-4 border-b border-red-500">
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-2">
-                <h1 className="text-3xl font-bold">Zanist</h1>
+                <BookOpen className="w-8 h-8 text-red-200" />
+                <h1 className="text-4xl font-bold">Zanist</h1>
               </Link>
             </div>
             
             <div className="flex items-center space-x-4">
               {/* Search */}
-              <div className="hidden md:flex items-center bg-white rounded">
+              <div className="hidden md:flex items-center bg-white rounded-lg">
                 <input
                   type="text"
                   placeholder="Search research, universities, professors..."
-                  className="px-3 py-2 text-gray-900 rounded-l w-80 focus:outline-none"
+                  className="px-4 py-3 text-gray-900 rounded-l-lg w-96 focus:outline-none text-base"
                 />
-                <button className="bg-red-500 px-4 py-2 rounded-r hover:bg-red-400">
-                  <Search className="w-4 h-4" />
+                <button className="bg-red-500 px-6 py-3 rounded-r-lg hover:bg-red-400 transition-colors">
+                  <Search className="w-5 h-5" />
                 </button>
               </div>
 

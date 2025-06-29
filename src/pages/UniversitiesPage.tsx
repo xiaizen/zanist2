@@ -196,6 +196,9 @@ const UniversitiesPage: React.FC = () => {
                         src={university.logo}
                         alt={university.name}
                         className="max-w-full max-h-full object-contain"
+                        onError={(e) => {
+                          e.currentTarget.src = 'https://via.placeholder.com/200x100/f3f4f6/6b7280?text=' + encodeURIComponent(university.shortName);
+                        }}
                       />
                     </div>
                     <div className="absolute top-4 left-4">
@@ -297,11 +300,18 @@ const UniversitiesPage: React.FC = () => {
               <Link
                 key={country.slug}
                 to={`/country/${country.slug}`}
-                className="bg-white rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+                className="bg-white rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 group"
               >
                 <div className="p-6 text-center">
-                  <div className="mb-4">
-                    <img src={country.flag} alt={`${country.name} flag`} className="w-16 h-12 object-cover mx-auto rounded" />
+                  <div className="mb-4 relative">
+                    <img 
+                      src={country.flag} 
+                      alt={`${country.name} flag`} 
+                      className="w-16 h-12 object-cover mx-auto rounded shadow-md transition-transform duration-300 group-hover:scale-110" 
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://via.placeholder.com/64x48/f3f4f6/6b7280?text=' + encodeURIComponent(country.name.substring(0, 2));
+                      }}
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-red-600 transition-colors">
                     {country.name}

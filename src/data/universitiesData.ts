@@ -46,7 +46,7 @@ export const top50Universities: University[] = [
     students: 11500,
     founded: 1861,
     website: 'mit.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/200px-MIT_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/MIT-Logo.png',
     description: 'Leading institution in technology, engineering, and scientific research.',
     specialties: ['Engineering', 'Computer Science', 'Physics', 'Economics'],
     latestResearch: [
@@ -81,7 +81,7 @@ export const top50Universities: University[] = [
     students: 17000,
     founded: 1885,
     website: 'stanford.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/200px-Seal_of_Leland_Stanford_Junior_University.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Stanford-Logo.png',
     description: 'Premier research university known for innovation and entrepreneurship.',
     specialties: ['Computer Science', 'Medicine', 'Business', 'Engineering'],
     latestResearch: [
@@ -116,7 +116,7 @@ export const top50Universities: University[] = [
     students: 23000,
     founded: 1636,
     website: 'harvard.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/200px-Harvard_University_coat_of_arms.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2020/06/Harvard-Logo.png',
     description: 'Oldest institution of higher education in the United States.',
     specialties: ['Medicine', 'Law', 'Business', 'Liberal Arts'],
     latestResearch: [
@@ -151,7 +151,7 @@ export const top50Universities: University[] = [
     students: 2200,
     founded: 1891,
     website: 'caltech.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Caltech_logo.svg/200px-Caltech_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Caltech-Logo.png',
     description: 'World-renowned science and engineering research university.',
     specialties: ['Physics', 'Astronomy', 'Engineering', 'Chemistry'],
     latestResearch: [
@@ -186,7 +186,7 @@ export const top50Universities: University[] = [
     students: 24000,
     founded: 1096,
     website: 'ox.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/200px-Oxford-University-Circlet.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Oxford-Logo.png',
     description: 'One of the oldest and most prestigious universities in the world.',
     specialties: ['Medicine', 'Literature', 'Philosophy', 'History'],
     latestResearch: [
@@ -221,7 +221,7 @@ export const top50Universities: University[] = [
     students: 21000,
     founded: 1209,
     website: 'cam.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/University_of_Cambridge_coat_of_arms_official.svg/200px-University_of_Cambridge_coat_of_arms_official.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Cambridge-Logo.png',
     description: 'Historic university with cutting-edge research across all disciplines.',
     specialties: ['Mathematics', 'Physics', 'Engineering', 'Natural Sciences'],
     latestResearch: [
@@ -256,7 +256,7 @@ export const top50Universities: University[] = [
     students: 22000,
     founded: 1855,
     website: 'ethz.ch',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/ETH_Zurich_Logo_black.svg/200px-ETH_Zurich_Logo_black.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/ETH-Zurich-Logo.png',
     description: 'Leading European university for technology and natural sciences.',
     specialties: ['Engineering', 'Computer Science', 'Mathematics', 'Physics'],
     latestResearch: [
@@ -291,7 +291,7 @@ export const top50Universities: University[] = [
     students: 42000,
     founded: 1826,
     website: 'ucl.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/UCL_logo.svg/200px-UCL_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UCL-Logo.png',
     description: 'London\'s leading multidisciplinary university.',
     specialties: ['Medicine', 'Engineering', 'Architecture', 'Social Sciences'],
     latestResearch: [
@@ -326,7 +326,7 @@ export const top50Universities: University[] = [
     students: 17000,
     founded: 1907,
     website: 'imperial.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Imperial_College_London_crest.svg/200px-Imperial_College_London_crest.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Imperial-College-London-Logo.png',
     description: 'Science, engineering, medicine and business university.',
     specialties: ['Engineering', 'Medicine', 'Natural Sciences', 'Business'],
     latestResearch: [
@@ -361,7 +361,7 @@ export const top50Universities: University[] = [
     students: 16000,
     founded: 1890,
     website: 'uchicago.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/University_of_Chicago_shield.svg/200px-University_of_Chicago_shield.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Chicago-Logo.png',
     description: 'Private research university known for rigorous academics.',
     specialties: ['Economics', 'Physics', 'Medicine', 'Social Sciences'],
     latestResearch: [
@@ -381,7 +381,6 @@ export const top50Universities: University[] = [
       email: 'info@uchicago.edu'
     }
   },
-  // Continue with universities 11-50
   {
     id: '11',
     name: 'National University of Singapore',
@@ -397,7 +396,7 @@ export const top50Universities: University[] = [
     students: 38000,
     founded: 1905,
     website: 'nus.edu.sg',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/NUS_coat_of_arms.svg/200px-NUS_coat_of_arms.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/NUS-Logo.png',
     description: 'Leading global university centered in Asia.',
     specialties: ['Engineering', 'Business', 'Medicine', 'Computer Science'],
     latestResearch: [
@@ -432,7 +431,7 @@ export const top50Universities: University[] = [
     students: 45000,
     founded: 1898,
     website: 'pku.edu.cn',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Peking_University_seal.svg/200px-Peking_University_seal.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Peking-University-Logo.png',
     description: 'China\'s premier comprehensive university.',
     specialties: ['Liberal Arts', 'Sciences', 'Medicine', 'Engineering'],
     latestResearch: [
@@ -467,7 +466,7 @@ export const top50Universities: University[] = [
     students: 25000,
     founded: 1740,
     website: 'upenn.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/UPenn_shield_with_banner.svg/200px-UPenn_shield_with_banner.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Pennsylvania-Logo.png',
     description: 'Ivy League university with strong professional schools.',
     specialties: ['Business', 'Medicine', 'Engineering', 'Social Sciences'],
     latestResearch: [
@@ -502,7 +501,7 @@ export const top50Universities: University[] = [
     students: 48000,
     founded: 1911,
     website: 'tsinghua.edu.cn',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Tsinghua_University_Logo.svg/200px-Tsinghua_University_Logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Tsinghua-University-Logo.png',
     description: 'China\'s leading university in engineering and technology.',
     specialties: ['Engineering', 'Computer Science', 'Architecture', 'Management'],
     latestResearch: [
@@ -537,7 +536,7 @@ export const top50Universities: University[] = [
     students: 35000,
     founded: 1582,
     website: 'ed.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/University_of_Edinburgh_ceremonial_roundel.svg/200px-University_of_Edinburgh_ceremonial_roundel.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Edinburgh-Logo.png',
     description: 'Scotland\'s premier university with global reputation.',
     specialties: ['Medicine', 'Veterinary Medicine', 'Engineering', 'Arts'],
     latestResearch: [
@@ -572,7 +571,7 @@ export const top50Universities: University[] = [
     students: 31000,
     founded: 1829,
     website: 'kcl.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/KCL_logo.svg/200px-KCL_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Kings-College-London-Logo.png',
     description: 'Research-led university in the heart of London.',
     specialties: ['Medicine', 'Dentistry', 'Law', 'Humanities'],
     latestResearch: [
@@ -607,7 +606,7 @@ export const top50Universities: University[] = [
     students: 12000,
     founded: 1895,
     website: 'lse.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/LSE_Logo.svg/200px-LSE_Logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/LSE-Logo.png',
     description: 'World\'s leading social science institution.',
     specialties: ['Economics', 'Political Science', 'Sociology', 'Law'],
     latestResearch: [
@@ -642,7 +641,7 @@ export const top50Universities: University[] = [
     students: 28000,
     founded: 1877,
     website: 'u-tokyo.ac.jp',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/The_University_of_Tokyo_Emblem.svg/200px-The_University_of_Tokyo_Emblem.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Tokyo-Logo.png',
     description: 'Japan\'s most prestigious university.',
     specialties: ['Engineering', 'Medicine', 'Law', 'Sciences'],
     latestResearch: [
@@ -677,7 +676,7 @@ export const top50Universities: University[] = [
     students: 47000,
     founded: 1817,
     website: 'umich.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Michigan_Wolverines_logo.svg/200px-Michigan_Wolverines_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Michigan-Logo.png',
     description: 'Leading public research university.',
     specialties: ['Engineering', 'Business', 'Medicine', 'Public Policy'],
     latestResearch: [
@@ -712,7 +711,7 @@ export const top50Universities: University[] = [
     students: 24000,
     founded: 1876,
     website: 'jhu.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Johns_Hopkins_University_seal.svg/200px-Johns_Hopkins_University_seal.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Johns-Hopkins-University-Logo.png',
     description: 'Premier research university and medical institution.',
     specialties: ['Medicine', 'Public Health', 'Engineering', 'International Studies'],
     latestResearch: [
@@ -732,7 +731,6 @@ export const top50Universities: University[] = [
       email: 'info@jhu.edu'
     }
   },
-  // Continue adding universities 21-50...
   {
     id: '21',
     name: 'University of California, Berkeley',
@@ -748,7 +746,7 @@ export const top50Universities: University[] = [
     students: 45000,
     founded: 1868,
     website: 'berkeley.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Seal_of_University_of_California%2C_Berkeley.svg/200px-Seal_of_University_of_California%2C_Berkeley.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UC-Berkeley-Logo.png',
     description: 'Top public research university.',
     specialties: ['Engineering', 'Computer Science', 'Business', 'Law'],
     latestResearch: [
@@ -783,7 +781,7 @@ export const top50Universities: University[] = [
     students: 97000,
     founded: 1827,
     website: 'utoronto.ca',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/University_of_Toronto_Coat_of_arms.svg/200px-University_of_Toronto_Coat_of_arms.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Toronto-Logo.png',
     description: 'Canada\'s leading research university.',
     specialties: ['Medicine', 'Engineering', 'Business', 'Arts & Science'],
     latestResearch: [
@@ -818,7 +816,7 @@ export const top50Universities: University[] = [
     students: 40000,
     founded: 1821,
     website: 'mcgill.ca',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/McGill_University_CoA.svg/200px-McGill_University_CoA.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/McGill-University-Logo.png',
     description: 'Canada\'s global university.',
     specialties: ['Medicine', 'Law', 'Engineering', 'Management'],
     latestResearch: [
@@ -853,7 +851,7 @@ export const top50Universities: University[] = [
     students: 25000,
     founded: 1946,
     website: 'anu.edu.au',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Australian_National_University_logo.svg/200px-Australian_National_University_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/ANU-Logo.png',
     description: 'Australia\'s national research university.',
     specialties: ['Political Science', 'International Relations', 'Physics', 'Economics'],
     latestResearch: [
@@ -888,7 +886,7 @@ export const top50Universities: University[] = [
     students: 40000,
     founded: 1824,
     website: 'manchester.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/University_of_Manchester_logo.svg/200px-University_of_Manchester_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Manchester-Logo.png',
     description: 'Major research university in northern England.',
     specialties: ['Engineering', 'Medicine', 'Business', 'Computer Science'],
     latestResearch: [
@@ -908,7 +906,6 @@ export const top50Universities: University[] = [
       email: 'info@manchester.ac.uk'
     }
   },
-  // Adding more universities to reach 50...
   {
     id: '26',
     name: 'Northwestern University',
@@ -924,7 +921,7 @@ export const top50Universities: University[] = [
     students: 22000,
     founded: 1851,
     website: 'northwestern.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Northwestern_University_seal.svg/200px-Northwestern_University_seal.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Northwestern-University-Logo.png',
     description: 'Private research university near Chicago.',
     specialties: ['Journalism', 'Engineering', 'Business', 'Medicine'],
     latestResearch: [
@@ -959,7 +956,7 @@ export const top50Universities: University[] = [
     students: 27000,
     founded: 1876,
     website: 'bristol.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/University_of_Bristol_logo.svg/200px-University_of_Bristol_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Bristol-Logo.png',
     description: 'Research-intensive university in southwest England.',
     specialties: ['Engineering', 'Medicine', 'Social Sciences', 'Arts'],
     latestResearch: [
@@ -994,7 +991,7 @@ export const top50Universities: University[] = [
     students: 27000,
     founded: 1965,
     website: 'warwick.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/University_of_Warwick_logo.svg/200px-University_of_Warwick_logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Warwick-Logo.png',
     description: 'Leading research university in the Midlands.',
     specialties: ['Business', 'Engineering', 'Mathematics', 'Economics'],
     latestResearch: [
@@ -1029,7 +1026,7 @@ export const top50Universities: University[] = [
     students: 45000,
     founded: 1868,
     website: 'tum.de',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/TUM_Logo.svg/200px-TUM_Logo.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/TUM-Logo.png',
     description: 'Germany\'s top technical university.',
     specialties: ['Engineering', 'Natural Sciences', 'Medicine', 'Management'],
     latestResearch: [
@@ -1064,7 +1061,7 @@ export const top50Universities: University[] = [
     students: 29000,
     founded: 1451,
     website: 'gla.ac.uk',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/University_of_Glasgow_coat_of_arms.svg/200px-University_of_Glasgow_coat_of_arms.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Glasgow-Logo.png',
     description: 'Ancient Scottish university with modern research focus.',
     specialties: ['Medicine', 'Engineering', 'Arts', 'Social Sciences'],
     latestResearch: [
@@ -1084,7 +1081,671 @@ export const top50Universities: University[] = [
       email: 'info@gla.ac.uk'
     }
   },
-  // Continue with remaining universities to reach 50...
+  {
+    id: '31',
+    name: 'Yale University',
+    shortName: 'Yale',
+    slug: 'yale',
+    country: 'United States',
+    city: 'New Haven, CT',
+    ranking: 31,
+    nobelPrizes: 65,
+    totalResearch: 720,
+    recentResearch: 35,
+    professors: 580,
+    students: 13000,
+    founded: 1701,
+    website: 'yale.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Yale-University-Logo.png',
+    description: 'Ivy League university with strong liberal arts tradition.',
+    specialties: ['Liberal Arts', 'Medicine', 'Law', 'Drama'],
+    latestResearch: [
+      'Immunology Research',
+      'Environmental Studies',
+      'Art History'
+    ],
+    stats: {
+      acceptanceRate: '5%',
+      studentFacultyRatio: '6:1',
+      internationalStudents: '20%',
+      researchFunding: '$650M'
+    },
+    contact: {
+      address: 'New Haven, CT 06520',
+      phone: '+1 (203) 432-4771',
+      email: 'info@yale.edu'
+    }
+  },
+  {
+    id: '32',
+    name: 'Columbia University',
+    shortName: 'Columbia',
+    slug: 'columbia',
+    country: 'United States',
+    city: 'New York, NY',
+    ranking: 32,
+    nobelPrizes: 104,
+    totalResearch: 890,
+    recentResearch: 42,
+    professors: 680,
+    students: 33000,
+    founded: 1754,
+    website: 'columbia.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Columbia-University-Logo.png',
+    description: 'Ivy League university in Manhattan.',
+    specialties: ['Journalism', 'Business', 'Medicine', 'International Affairs'],
+    latestResearch: [
+      'Climate Science',
+      'Journalism Innovation',
+      'Urban Studies'
+    ],
+    stats: {
+      acceptanceRate: '4%',
+      studentFacultyRatio: '6:1',
+      internationalStudents: '35%',
+      researchFunding: '$750M'
+    },
+    contact: {
+      address: '116th St & Broadway, New York, NY 10027',
+      phone: '+1 (212) 854-1754',
+      email: 'info@columbia.edu'
+    }
+  },
+  {
+    id: '33',
+    name: 'Princeton University',
+    shortName: 'Princeton',
+    slug: 'princeton',
+    country: 'United States',
+    city: 'Princeton, NJ',
+    ranking: 33,
+    nobelPrizes: 69,
+    totalResearch: 650,
+    recentResearch: 31,
+    professors: 520,
+    students: 8500,
+    founded: 1746,
+    website: 'princeton.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Princeton-University-Logo.png',
+    description: 'Elite Ivy League research university.',
+    specialties: ['Physics', 'Economics', 'Public Policy', 'Engineering'],
+    latestResearch: [
+      'Plasma Physics',
+      'Economic Theory',
+      'Computer Science'
+    ],
+    stats: {
+      acceptanceRate: '4%',
+      studentFacultyRatio: '5:1',
+      internationalStudents: '23%',
+      researchFunding: '$400M'
+    },
+    contact: {
+      address: 'Princeton, NJ 08544',
+      phone: '+1 (609) 258-3000',
+      email: 'info@princeton.edu'
+    }
+  },
+  {
+    id: '34',
+    name: 'Cornell University',
+    shortName: 'Cornell',
+    slug: 'cornell',
+    country: 'United States',
+    city: 'Ithaca, NY',
+    ranking: 34,
+    nobelPrizes: 58,
+    totalResearch: 820,
+    recentResearch: 38,
+    professors: 650,
+    students: 25000,
+    founded: 1865,
+    website: 'cornell.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Cornell-University-Logo.png',
+    description: 'Ivy League university with strong engineering and agriculture programs.',
+    specialties: ['Engineering', 'Agriculture', 'Veterinary Medicine', 'Business'],
+    latestResearch: [
+      'Agricultural Innovation',
+      'Veterinary Science',
+      'Engineering Research'
+    ],
+    stats: {
+      acceptanceRate: '9%',
+      studentFacultyRatio: '9:1',
+      internationalStudents: '25%',
+      researchFunding: '$900M'
+    },
+    contact: {
+      address: 'Ithaca, NY 14853',
+      phone: '+1 (607) 254-4636',
+      email: 'info@cornell.edu'
+    }
+  },
+  {
+    id: '35',
+    name: 'University of Melbourne',
+    shortName: 'Melbourne',
+    slug: 'melbourne',
+    country: 'Australia',
+    city: 'Melbourne, VIC',
+    ranking: 35,
+    nobelPrizes: 8,
+    totalResearch: 750,
+    recentResearch: 36,
+    professors: 520,
+    students: 50000,
+    founded: 1853,
+    website: 'unimelb.edu.au',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Melbourne-Logo.png',
+    description: 'Australia\'s leading comprehensive university.',
+    specialties: ['Medicine', 'Law', 'Business', 'Engineering'],
+    latestResearch: [
+      'Medical Research',
+      'Climate Studies',
+      'Urban Planning'
+    ],
+    stats: {
+      acceptanceRate: '70%',
+      studentFacultyRatio: '18:1',
+      internationalStudents: '45%',
+      researchFunding: 'AUD $850M'
+    },
+    contact: {
+      address: 'Parkville VIC 3010, Australia',
+      phone: '+61 3 9035 5511',
+      email: 'info@unimelb.edu.au'
+    }
+  },
+  {
+    id: '36',
+    name: 'University of Sydney',
+    shortName: 'Sydney',
+    slug: 'sydney',
+    country: 'Australia',
+    city: 'Sydney, NSW',
+    ranking: 36,
+    nobelPrizes: 5,
+    totalResearch: 680,
+    recentResearch: 33,
+    professors: 480,
+    students: 52000,
+    founded: 1850,
+    website: 'sydney.edu.au',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Sydney-Logo.png',
+    description: 'Australia\'s first university.',
+    specialties: ['Medicine', 'Engineering', 'Arts', 'Business'],
+    latestResearch: [
+      'Brain Research',
+      'Engineering Innovation',
+      'Social Sciences'
+    ],
+    stats: {
+      acceptanceRate: '30%',
+      studentFacultyRatio: '19:1',
+      internationalStudents: '40%',
+      researchFunding: 'AUD $600M'
+    },
+    contact: {
+      address: 'Camperdown NSW 2006, Australia',
+      phone: '+61 2 9351 2222',
+      email: 'info@sydney.edu.au'
+    }
+  },
+  {
+    id: '37',
+    name: 'University of British Columbia',
+    shortName: 'UBC',
+    slug: 'ubc',
+    country: 'Canada',
+    city: 'Vancouver, BC',
+    ranking: 37,
+    nobelPrizes: 8,
+    totalResearch: 720,
+    recentResearch: 35,
+    professors: 580,
+    students: 65000,
+    founded: 1908,
+    website: 'ubc.ca',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UBC-Logo.png',
+    description: 'Leading Canadian research university.',
+    specialties: ['Medicine', 'Engineering', 'Forestry', 'Business'],
+    latestResearch: [
+      'Forestry Research',
+      'Ocean Sciences',
+      'Sustainable Development'
+    ],
+    stats: {
+      acceptanceRate: '53%',
+      studentFacultyRatio: '17:1',
+      internationalStudents: '28%',
+      researchFunding: 'CAD $650M'
+    },
+    contact: {
+      address: '2329 West Mall, Vancouver, BC V6T 1Z4',
+      phone: '+1 (604) 822-2211',
+      email: 'info@ubc.ca'
+    }
+  },
+  {
+    id: '38',
+    name: 'Nanyang Technological University',
+    shortName: 'NTU',
+    slug: 'ntu',
+    country: 'Singapore',
+    city: 'Singapore',
+    ranking: 38,
+    nobelPrizes: 1,
+    totalResearch: 650,
+    recentResearch: 32,
+    professors: 450,
+    students: 33000,
+    founded: 1991,
+    website: 'ntu.edu.sg',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/NTU-Logo.png',
+    description: 'Young and research-intensive university.',
+    specialties: ['Engineering', 'Business', 'Science', 'Medicine'],
+    latestResearch: [
+      'Smart Materials',
+      'Artificial Intelligence',
+      'Sustainable Energy'
+    ],
+    stats: {
+      acceptanceRate: '15%',
+      studentFacultyRatio: '13:1',
+      internationalStudents: '25%',
+      researchFunding: 'S$800M'
+    },
+    contact: {
+      address: '50 Nanyang Ave, Singapore 639798',
+      phone: '+65 6791 1744',
+      email: 'info@ntu.edu.sg'
+    }
+  },
+  {
+    id: '39',
+    name: 'Kyoto University',
+    shortName: 'Kyoto',
+    slug: 'kyoto',
+    country: 'Japan',
+    city: 'Kyoto',
+    ranking: 39,
+    nobelPrizes: 19,
+    totalResearch: 680,
+    recentResearch: 34,
+    professors: 520,
+    students: 23000,
+    founded: 1897,
+    website: 'kyoto-u.ac.jp',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Kyoto-University-Logo.png',
+    description: 'Japan\'s second-oldest university.',
+    specialties: ['Sciences', 'Medicine', 'Engineering', 'Humanities'],
+    latestResearch: [
+      'Stem Cell Research',
+      'Materials Science',
+      'Cultural Studies'
+    ],
+    stats: {
+      acceptanceRate: '4%',
+      studentFacultyRatio: '9:1',
+      internationalStudents: '10%',
+      researchFunding: '¥180B'
+    },
+    contact: {
+      address: 'Yoshida-Honmachi, Sakyo-ku, Kyoto 606-8501',
+      phone: '+81 75 753 7531',
+      email: 'info@kyoto-u.ac.jp'
+    }
+  },
+  {
+    id: '40',
+    name: 'Seoul National University',
+    shortName: 'SNU',
+    slug: 'snu',
+    country: 'South Korea',
+    city: 'Seoul',
+    ranking: 40,
+    nobelPrizes: 1,
+    totalResearch: 720,
+    recentResearch: 36,
+    professors: 580,
+    students: 28000,
+    founded: 1946,
+    website: 'snu.ac.kr',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/SNU-Logo.png',
+    description: 'South Korea\'s most prestigious university.',
+    specialties: ['Engineering', 'Medicine', 'Business', 'Liberal Arts'],
+    latestResearch: [
+      'Semiconductor Technology',
+      'Biomedical Engineering',
+      'Korean Studies'
+    ],
+    stats: {
+      acceptanceRate: '2%',
+      studentFacultyRatio: '12:1',
+      internationalStudents: '15%',
+      researchFunding: '₩450B'
+    },
+    contact: {
+      address: '1 Gwanak-ro, Gwanak-gu, Seoul 08826',
+      phone: '+82 2 880 5114',
+      email: 'info@snu.ac.kr'
+    }
+  },
+  {
+    id: '41',
+    name: 'University of Hong Kong',
+    shortName: 'HKU',
+    slug: 'hku',
+    country: 'Hong Kong',
+    city: 'Hong Kong',
+    ranking: 41,
+    nobelPrizes: 2,
+    totalResearch: 580,
+    recentResearch: 29,
+    professors: 420,
+    students: 29000,
+    founded: 1911,
+    website: 'hku.hk',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/HKU-Logo.png',
+    description: 'Hong Kong\'s oldest tertiary institution.',
+    specialties: ['Medicine', 'Law', 'Business', 'Engineering'],
+    latestResearch: [
+      'Medical Research',
+      'Financial Technology',
+      'Urban Studies'
+    ],
+    stats: {
+      acceptanceRate: '10%',
+      studentFacultyRatio: '14:1',
+      internationalStudents: '40%',
+      researchFunding: 'HK$3.2B'
+    },
+    contact: {
+      address: 'Pokfulam, Hong Kong',
+      phone: '+852 2859 2111',
+      email: 'info@hku.hk'
+    }
+  },
+  {
+    id: '42',
+    name: 'University of California, Los Angeles',
+    shortName: 'UCLA',
+    slug: 'ucla',
+    country: 'United States',
+    city: 'Los Angeles, CA',
+    ranking: 42,
+    nobelPrizes: 15,
+    totalResearch: 950,
+    recentResearch: 44,
+    professors: 780,
+    students: 45000,
+    founded: 1919,
+    website: 'ucla.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UCLA-Logo.png',
+    description: 'Public research university in Los Angeles.',
+    specialties: ['Medicine', 'Engineering', 'Film', 'Business'],
+    latestResearch: [
+      'Entertainment Technology',
+      'Medical Innovation',
+      'Urban Planning'
+    ],
+    stats: {
+      acceptanceRate: '12%',
+      studentFacultyRatio: '18:1',
+      internationalStudents: '15%',
+      researchFunding: '$1.1B'
+    },
+    contact: {
+      address: '405 Hilgard Ave, Los Angeles, CA 90095',
+      phone: '+1 (310) 825-4321',
+      email: 'info@ucla.edu'
+    }
+  },
+  {
+    id: '43',
+    name: 'University of New South Wales',
+    shortName: 'UNSW',
+    slug: 'unsw',
+    country: 'Australia',
+    city: 'Sydney, NSW',
+    ranking: 43,
+    nobelPrizes: 1,
+    totalResearch: 620,
+    recentResearch: 31,
+    professors: 450,
+    students: 59000,
+    founded: 1949,
+    website: 'unsw.edu.au',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UNSW-Logo.png',
+    description: 'Leading Australian technological university.',
+    specialties: ['Engineering', 'Business', 'Medicine', 'Art & Design'],
+    latestResearch: [
+      'Solar Cell Technology',
+      'Engineering Innovation',
+      'Business Analytics'
+    ],
+    stats: {
+      acceptanceRate: '35%',
+      studentFacultyRatio: '20:1',
+      internationalStudents: '35%',
+      researchFunding: 'AUD $400M'
+    },
+    contact: {
+      address: 'High St, Kensington NSW 2052, Australia',
+      phone: '+61 2 9385 1000',
+      email: 'info@unsw.edu.au'
+    }
+  },
+  {
+    id: '44',
+    name: 'University of Queensland',
+    shortName: 'UQ',
+    slug: 'uq',
+    country: 'Australia',
+    city: 'Brisbane, QLD',
+    ranking: 44,
+    nobelPrizes: 2,
+    totalResearch: 590,
+    recentResearch: 30,
+    professors: 420,
+    students: 52000,
+    founded: 1909,
+    website: 'uq.edu.au',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UQ-Logo.png',
+    description: 'Queensland\'s oldest university.',
+    specialties: ['Medicine', 'Engineering', 'Agriculture', 'Business'],
+    latestResearch: [
+      'Tropical Medicine',
+      'Mining Engineering',
+      'Environmental Science'
+    ],
+    stats: {
+      acceptanceRate: '45%',
+      studentFacultyRatio: '19:1',
+      internationalStudents: '38%',
+      researchFunding: 'AUD $500M'
+    },
+    contact: {
+      address: 'St Lucia QLD 4072, Australia',
+      phone: '+61 7 3365 1111',
+      email: 'info@uq.edu.au'
+    }
+  },
+  {
+    id: '45',
+    name: 'Monash University',
+    shortName: 'Monash',
+    slug: 'monash',
+    country: 'Australia',
+    city: 'Melbourne, VIC',
+    ranking: 45,
+    nobelPrizes: 1,
+    totalResearch: 560,
+    recentResearch: 28,
+    professors: 400,
+    students: 80000,
+    founded: 1958,
+    website: 'monash.edu',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Monash-University-Logo.png',
+    description: 'Large research university in Melbourne.',
+    specialties: ['Medicine', 'Engineering', 'Business', 'Pharmacy'],
+    latestResearch: [
+      'Pharmaceutical Research',
+      'Engineering Solutions',
+      'Medical Innovation'
+    ],
+    stats: {
+      acceptanceRate: '40%',
+      studentFacultyRatio: '22:1',
+      internationalStudents: '35%',
+      researchFunding: 'AUD $380M'
+    },
+    contact: {
+      address: 'Wellington Rd, Clayton VIC 3800, Australia',
+      phone: '+61 3 9905 4000',
+      email: 'info@monash.edu'
+    }
+  },
+  {
+    id: '46',
+    name: 'University of Amsterdam',
+    shortName: 'UvA',
+    slug: 'uva',
+    country: 'Netherlands',
+    city: 'Amsterdam',
+    ranking: 46,
+    nobelPrizes: 6,
+    totalResearch: 520,
+    recentResearch: 26,
+    professors: 380,
+    students: 42000,
+    founded: 1632,
+    website: 'uva.nl',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/UvA-Logo.png',
+    description: 'Leading Dutch research university.',
+    specialties: ['Social Sciences', 'Humanities', 'Economics', 'Law'],
+    latestResearch: [
+      'Social Policy Research',
+      'European Studies',
+      'Digital Humanities'
+    ],
+    stats: {
+      acceptanceRate: '25%',
+      studentFacultyRatio: '16:1',
+      internationalStudents: '30%',
+      researchFunding: '€280M'
+    },
+    contact: {
+      address: 'Spui 21, 1012 WX Amsterdam, Netherlands',
+      phone: '+31 20 525 9111',
+      email: 'info@uva.nl'
+    }
+  },
+  {
+    id: '47',
+    name: 'Delft University of Technology',
+    shortName: 'TU Delft',
+    slug: 'tu-delft',
+    country: 'Netherlands',
+    city: 'Delft',
+    ranking: 47,
+    nobelPrizes: 3,
+    totalResearch: 480,
+    recentResearch: 24,
+    professors: 350,
+    students: 26000,
+    founded: 1842,
+    website: 'tudelft.nl',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/TU-Delft-Logo.png',
+    description: 'Leading technical university in the Netherlands.',
+    specialties: ['Engineering', 'Technology', 'Applied Sciences', 'Architecture'],
+    latestResearch: [
+      'Aerospace Engineering',
+      'Water Management',
+      'Sustainable Technology'
+    ],
+    stats: {
+      acceptanceRate: '20%',
+      studentFacultyRatio: '15:1',
+      internationalStudents: '35%',
+      researchFunding: '€320M'
+    },
+    contact: {
+      address: 'Stevinweg 1, 2628 CN Delft, Netherlands',
+      phone: '+31 15 278 9111',
+      email: 'info@tudelft.nl'
+    }
+  },
+  {
+    id: '48',
+    name: 'University of Copenhagen',
+    shortName: 'UCPH',
+    slug: 'ucph',
+    country: 'Denmark',
+    city: 'Copenhagen',
+    ranking: 48,
+    nobelPrizes: 9,
+    totalResearch: 550,
+    recentResearch: 27,
+    professors: 420,
+    students: 37000,
+    founded: 1479,
+    website: 'ku.dk',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Copenhagen-Logo.png',
+    description: 'Denmark\'s oldest and largest university.',
+    specialties: ['Medicine', 'Natural Sciences', 'Humanities', 'Social Sciences'],
+    latestResearch: [
+      'Climate Research',
+      'Medical Innovation',
+      'Nordic Studies'
+    ],
+    stats: {
+      acceptanceRate: '30%',
+      studentFacultyRatio: '14:1',
+      internationalStudents: '20%',
+      researchFunding: 'DKK 4.2B'
+    },
+    contact: {
+      address: 'Nørregade 10, 1165 København K, Denmark',
+      phone: '+45 35 32 26 26',
+      email: 'info@ku.dk'
+    }
+  },
+  {
+    id: '49',
+    name: 'Karolinska Institute',
+    shortName: 'KI',
+    slug: 'ki',
+    country: 'Sweden',
+    city: 'Stockholm',
+    ranking: 49,
+    nobelPrizes: 5,
+    totalResearch: 420,
+    recentResearch: 22,
+    professors: 280,
+    students: 8000,
+    founded: 1810,
+    website: 'ki.se',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/Karolinska-Institute-Logo.png',
+    description: 'Leading medical university in Sweden.',
+    specialties: ['Medicine', 'Health Sciences', 'Dentistry', 'Pharmacy'],
+    latestResearch: [
+      'Medical Research',
+      'Public Health',
+      'Pharmaceutical Sciences'
+    ],
+    stats: {
+      acceptanceRate: '15%',
+      studentFacultyRatio: '10:1',
+      internationalStudents: '25%',
+      researchFunding: 'SEK 3.8B'
+    },
+    contact: {
+      address: '171 77 Stockholm, Sweden',
+      phone: '+46 8 524 800 00',
+      email: 'info@ki.se'
+    }
+  },
   {
     id: '50',
     name: 'University of Wisconsin-Madison',
@@ -1100,7 +1761,7 @@ export const top50Universities: University[] = [
     students: 47000,
     founded: 1848,
     website: 'wisc.edu',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/University_of_Wisconsin-Madison_seal.svg/200px-University_of_Wisconsin-Madison_seal.svg.png',
+    logo: 'https://logos-world.net/wp-content/uploads/2021/01/University-of-Wisconsin-Madison-Logo.png',
     description: 'Leading public research university in the Midwest.',
     specialties: ['Agriculture', 'Engineering', 'Medicine', 'Business'],
     latestResearch: [
@@ -1188,10 +1849,10 @@ export const countries: Country[] = [
     name: 'Australia',
     slug: 'australia',
     flag: 'https://flagcdn.com/w320/au.png',
-    universities: 2,
-    totalResearch: 1560,
+    universities: 6,
+    totalResearch: 3560,
     nobelPrizes: 34,
-    topUniversities: ['University of Melbourne', 'ANU'],
+    topUniversities: ['University of Melbourne', 'ANU', 'Sydney', 'UNSW'],
     description: 'Premier research universities in the Asia-Pacific region.'
   },
   {
@@ -1208,10 +1869,10 @@ export const countries: Country[] = [
     name: 'Japan',
     slug: 'japan',
     flag: 'https://flagcdn.com/w320/jp.png',
-    universities: 3,
-    totalResearch: 2340,
+    universities: 2,
+    totalResearch: 1660,
     nobelPrizes: 89,
-    topUniversities: ['University of Tokyo', 'Kyoto University', 'Osaka University'],
+    topUniversities: ['University of Tokyo', 'Kyoto University'],
     description: 'Leading Asian institutions with strong research traditions.'
   },
   {
@@ -1223,5 +1884,55 @@ export const countries: Country[] = [
     nobelPrizes: 10,
     topUniversities: ['Peking University', 'Tsinghua University'],
     description: 'Rapidly advancing research institutions with global impact.'
+  },
+  {
+    name: 'Netherlands',
+    slug: 'netherlands',
+    flag: 'https://flagcdn.com/w320/nl.png',
+    universities: 2,
+    totalResearch: 1000,
+    nobelPrizes: 9,
+    topUniversities: ['University of Amsterdam', 'TU Delft'],
+    description: 'Innovative Dutch universities leading in technology and social sciences.'
+  },
+  {
+    name: 'South Korea',
+    slug: 'south-korea',
+    flag: 'https://flagcdn.com/w320/kr.png',
+    universities: 1,
+    totalResearch: 720,
+    nobelPrizes: 1,
+    topUniversities: ['Seoul National University'],
+    description: 'Rapidly emerging research powerhouse in Asia.'
+  },
+  {
+    name: 'Hong Kong',
+    slug: 'hong-kong',
+    flag: 'https://flagcdn.com/w320/hk.png',
+    universities: 1,
+    totalResearch: 580,
+    nobelPrizes: 2,
+    topUniversities: ['University of Hong Kong'],
+    description: 'International hub for research and education in Asia.'
+  },
+  {
+    name: 'Denmark',
+    slug: 'denmark',
+    flag: 'https://flagcdn.com/w320/dk.png',
+    universities: 1,
+    totalResearch: 550,
+    nobelPrizes: 9,
+    topUniversities: ['University of Copenhagen'],
+    description: 'Nordic excellence in research and innovation.'
+  },
+  {
+    name: 'Sweden',
+    slug: 'sweden',
+    flag: 'https://flagcdn.com/w320/se.png',
+    universities: 1,
+    totalResearch: 420,
+    nobelPrizes: 5,
+    topUniversities: ['Karolinska Institute'],
+    description: 'Leading medical research institution in Scandinavia.'
   }
 ];
