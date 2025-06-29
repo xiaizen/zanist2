@@ -16,7 +16,7 @@ import {
   Globe,
   Star,
   TrendingUp,
-  BookOpen
+  MapPin
 } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
 import { sampleEssays } from '../data/sampleEssays';
@@ -85,7 +85,7 @@ const HomePage: React.FC = () => {
             </div>
             
             <div className="flex items-center space-x-4">
-              {/* Search */}
+              {/* Enhanced Search */}
               <div className="hidden md:flex items-center bg-white rounded-lg">
                 <input
                   type="text"
@@ -201,7 +201,14 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
                   <div className="text-white">
-                    <div className="text-sm mb-2">{featuredEssay.category}</div>
+                    <div className="text-sm mb-2">
+                      <Link 
+                        to={`/category/${featuredEssay.category.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="hover:text-red-200 transition-colors"
+                      >
+                        {featuredEssay.category}
+                      </Link>
+                    </div>
                     <h1 
                       className="text-2xl md:text-3xl font-bold mb-3 cursor-pointer hover:text-red-200"
                       onClick={() => setSelectedEssay(featuredEssay)}
@@ -210,7 +217,12 @@ const HomePage: React.FC = () => {
                     </h1>
                     <p className="text-gray-200 mb-3">{featuredEssay.summary}</p>
                     <div className="flex items-center space-x-4 text-sm">
-                      <span>{featuredEssay.university}</span>
+                      <Link 
+                        to={`/university/${featuredEssay.university.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="hover:text-red-200 transition-colors"
+                      >
+                        {featuredEssay.university}
+                      </Link>
                       <span>•</span>
                       <span>{new Date(featuredEssay.publishDate).toLocaleDateString()}</span>
                       <span>•</span>
@@ -241,9 +253,12 @@ const HomePage: React.FC = () => {
                           }}
                         />
                         <div className="absolute top-3 left-3">
-                          <span className="bg-red-600 text-white px-2 py-1 text-xs font-medium rounded">
+                          <Link 
+                            to={`/category/${news.category.toLowerCase().replace(/\s+/g, '-')}`}
+                            className="bg-red-600 text-white px-2 py-1 text-xs font-medium rounded hover:bg-red-700 transition-colors"
+                          >
                             {news.category}
-                          </span>
+                          </Link>
                         </div>
                       </div>
                       
@@ -261,7 +276,12 @@ const HomePage: React.FC = () => {
                         
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <div className="flex items-center space-x-3">
-                            <span>{news.university}</span>
+                            <Link 
+                              to={`/university/${news.university.toLowerCase().replace(/\s+/g, '-')}`}
+                              className="hover:text-red-600 transition-colors"
+                            >
+                              {news.university}
+                            </Link>
                             <span>•</span>
                             <div className="flex items-center">
                               <Clock className="w-3 h-3 mr-1" />

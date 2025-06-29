@@ -83,7 +83,14 @@ const CountryPage: React.FC = () => {
           </div>
           
           <div className="flex items-center space-x-4 mb-4">
-            <img src={country.flag} alt={`${country.name} flag`} className="w-16 h-12 object-cover rounded" />
+            <div className="relative group">
+              <img 
+                src={country.flag} 
+                alt={`${country.name} flag`} 
+                className="w-20 h-14 object-cover rounded shadow-lg transition-transform duration-300 group-hover:scale-110" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
+            </div>
             <div>
               <h1 className="text-4xl font-bold mb-2">{country.name}</h1>
               <p className="text-red-100 text-lg max-w-3xl">
@@ -217,6 +224,9 @@ const CountryPage: React.FC = () => {
                     src={university.logo}
                     alt={university.name}
                     className="max-w-full max-h-full object-contain"
+                    onError={(e) => {
+                      e.currentTarget.src = 'https://via.placeholder.com/200x100/f3f4f6/6b7280?text=' + encodeURIComponent(university.shortName);
+                    }}
                   />
                 </div>
                 <div className="absolute top-4 left-4">
@@ -321,10 +331,15 @@ const CountryPage: React.FC = () => {
               <Link
                 key={otherCountry.slug}
                 to={`/country/${otherCountry.slug}`}
-                className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors group"
+                className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 group"
               >
-                <div className="mb-2">
-                  <img src={otherCountry.flag} alt={`${otherCountry.name} flag`} className="w-12 h-8 object-cover mx-auto rounded" />
+                <div className="mb-2 relative">
+                  <img 
+                    src={otherCountry.flag} 
+                    alt={`${otherCountry.name} flag`} 
+                    className="w-12 h-8 object-cover mx-auto rounded transition-transform duration-300 group-hover:scale-110" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
                 </div>
                 <h3 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
                   {otherCountry.name}

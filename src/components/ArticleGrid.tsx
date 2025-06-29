@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, MapPin } from 'lucide-react';
 import { Essay } from '../types/Essay';
 
@@ -21,18 +22,31 @@ const ArticleGrid: React.FC<ArticleGridProps> = ({ essays, onSelect }) => {
               src={essay.imageUrl}
               alt={essay.title}
               className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              onError={(e) => {
+                e.currentTarget.src = 'https://images.pexels.com/photos/3825572/pexels-photo-3825572.jpeg?auto=compress&cs=tinysrgb&w=800';
+              }}
             />
             <div className="absolute top-4 left-4">
-              <span className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <Link 
+                to={`/category/${essay.category.toLowerCase().replace(/\s+/g, '-')}`}
+                className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-red-700 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
                 {essay.category}
-              </span>
+              </Link>
             </div>
           </div>
           
           <div className="p-6">
             <div className="flex items-center space-x-2 text-sm text-gray-500 mb-3">
               <MapPin className="w-4 h-4" />
-              <span>{essay.university}</span>
+              <Link 
+                to={`/university/${essay.university.toLowerCase().replace(/\s+/g, '-')}`}
+                className="hover:text-red-600 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {essay.university}
+              </Link>
               <span>•</span>
               <div className="flex items-center space-x-1">
                 <Clock className="w-4 h-4" />

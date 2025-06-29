@@ -227,7 +227,12 @@ const UniversitiesPage: React.FC = () => {
                       <h4 className="text-sm text-gray-600 mb-2">{university.name}</h4>
                       <div className="flex items-center text-sm text-gray-500">
                         <MapPin className="w-4 h-4 mr-1" />
-                        <span>{university.city}, {university.country}</span>
+                        <Link 
+                          to={`/country/${university.country.toLowerCase().replace(/\s+/g, '-')}`}
+                          className="hover:text-red-600 transition-colors"
+                        >
+                          {university.city}, {university.country}
+                        </Link>
                       </div>
                     </div>
 
@@ -312,6 +317,7 @@ const UniversitiesPage: React.FC = () => {
                         e.currentTarget.src = 'https://via.placeholder.com/64x48/f3f4f6/6b7280?text=' + encodeURIComponent(country.name.substring(0, 2));
                       }}
                     />
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded"></div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-red-600 transition-colors">
                     {country.name}

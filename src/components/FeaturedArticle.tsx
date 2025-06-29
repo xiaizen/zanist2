@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, MapPin } from 'lucide-react';
 import { Essay } from '../types/Essay';
 
@@ -15,17 +16,30 @@ const FeaturedArticle: React.FC<FeaturedArticleProps> = ({ essay, onSelect }) =>
           src={essay.imageUrl}
           alt={essay.title}
           className="w-full h-64 sm:h-80 md:h-96 object-cover transition-transform duration-500 group-hover:scale-105"
+          onError={(e) => {
+            e.currentTarget.src = 'https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=800';
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
         
         <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8 text-white">
           <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-3 sm:mb-4">
-            <span className="bg-red-600 px-3 py-1 rounded text-sm font-medium inline-block w-fit">
+            <Link 
+              to={`/category/${essay.category.toLowerCase().replace(/\s+/g, '-')}`}
+              className="bg-red-600 px-3 py-1 rounded text-sm font-medium inline-block w-fit hover:bg-red-700 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
               {essay.category}
-            </span>
+            </Link>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <MapPin className="w-4 h-4 flex-shrink-0" />
-              <span className="break-words">{essay.university}</span>
+              <Link 
+                to={`/university/${essay.university.toLowerCase().replace(/\s+/g, '-')}`}
+                className="break-words hover:text-red-200 transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {essay.university}
+              </Link>
             </div>
           </div>
           

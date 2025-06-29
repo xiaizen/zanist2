@@ -35,37 +35,44 @@ const ZanistLogo: React.FC<ZanistLogoProps> = ({
 
   return (
     <div className={`flex items-center space-x-3 ${className}`}>
-      {/* Custom Zanist Logo - Atomic Book Design */}
+      {/* Zanist Logo - Atomic Book Design from provided image */}
       <div className={`${sizeClasses[size]} ${colorClasses[color]} relative`}>
         <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
           {/* Open Book Base */}
-          <path d="M15 75 L15 25 Q15 20 20 20 L45 20 Q50 25 50 30 L50 70 Q45 75 40 75 L20 75 Q15 75 15 75 Z" />
-          <path d="M85 75 L85 25 Q85 20 80 20 L55 20 Q50 25 50 30 L50 70 Q55 75 60 75 L80 75 Q85 75 85 75 Z" />
+          <path d="M20 75 L20 30 Q20 25 25 25 L45 25 Q50 30 50 35 L50 70 Q45 75 40 75 L25 75 Q20 75 20 75 Z" 
+                fillOpacity="0.9" />
+          <path d="M80 75 L80 30 Q80 25 75 25 L55 25 Q50 30 50 35 L50 70 Q55 75 60 75 L75 75 Q80 75 80 75 Z" 
+                fillOpacity="0.9" />
           
-          {/* Book Pages */}
-          <line x1="20" y1="30" x2="45" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-          <line x1="20" y1="35" x2="45" y2="35" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-          <line x1="20" y1="40" x2="45" y2="40" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-          <line x1="55" y1="30" x2="80" y2="30" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-          <line x1="55" y1="35" x2="80" y2="35" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-          <line x1="55" y1="40" x2="80" y2="40" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
+          {/* Book Spine */}
+          <path d="M48 25 L48 75 L52 75 L52 25 Z" fillOpacity="0.3" />
           
-          {/* Atomic Structure */}
+          {/* Atomic Structure - Multiple Electron Orbits */}
+          {/* Orbit 1 - Horizontal */}
+          <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.8"/>
+          
+          {/* Orbit 2 - 60 degrees */}
+          <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.8" 
+                   transform="rotate(60 50 50)"/>
+          
+          {/* Orbit 3 - 120 degrees */}
+          <ellipse cx="50" cy="50" rx="25" ry="8" fill="none" stroke="currentColor" strokeWidth="2" opacity="0.8" 
+                   transform="rotate(120 50 50)"/>
+          
           {/* Central Nucleus */}
-          <circle cx="50" cy="50" r="3" fill="currentColor"/>
+          <circle cx="50" cy="50" r="4" fill="currentColor"/>
           
-          {/* Electron Orbits */}
-          <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8"/>
-          <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8" transform="rotate(60 50 50)"/>
-          <ellipse cx="50" cy="50" rx="20" ry="8" fill="none" stroke="currentColor" strokeWidth="1.5" opacity="0.8" transform="rotate(120 50 50)"/>
+          {/* Lightning/Energy Symbol in Center */}
+          <path d="M47 42 L53 42 L49 50 L55 50 L45 62 L51 54 L45 54 L49 46 Z" 
+                fill="currentColor" opacity="0.9"/>
           
-          {/* Electrons */}
-          <circle cx="70" cy="50" r="1.5" fill="currentColor"/>
-          <circle cx="35" cy="44" r="1.5" fill="currentColor"/>
-          <circle cx="65" cy="56" r="1.5" fill="currentColor"/>
-          
-          {/* Energy/Lightning Symbol in Center */}
-          <path d="M48 45 L52 45 L49 50 L53 50 L47 58 L51 52 L47 52 L50 47 Z" fill="currentColor" opacity="0.9"/>
+          {/* Electrons on Orbits */}
+          <circle cx="75" cy="50" r="2" fill="currentColor"/>
+          <circle cx="25" cy="50" r="2" fill="currentColor"/>
+          <circle cx="62" cy="35" r="2" fill="currentColor"/>
+          <circle cx="38" cy="65" r="2" fill="currentColor"/>
+          <circle cx="62" cy="65" r="2" fill="currentColor"/>
+          <circle cx="38" cy="35" r="2" fill="currentColor"/>
         </svg>
       </div>
       
