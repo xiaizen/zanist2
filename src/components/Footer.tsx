@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ExternalLink, Zap } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -10,9 +11,21 @@ const Footer: React.FC = () => {
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <h3 className="text-xl font-bold">Zanist</h3>
             </Link>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm mb-4">
               Your trusted source for the latest scientific discoveries and research breakthroughs.
             </p>
+            
+            {/* Built with Bolt Badge */}
+            <a
+              href="https://bolt.new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <Zap className="w-4 h-4" />
+              <span>Built with Bolt</span>
+              <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
           
           <div>
@@ -49,8 +62,24 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; 2024 Zanist. All rights reserved. | <Link to="/privacy" className="hover:text-white">Privacy Policy</Link> | <Link to="/terms" className="hover:text-white">Terms of Service</Link></p>
+        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <div className="text-center md:text-left text-sm text-gray-400 mb-4 md:mb-0">
+            <p>&copy; 2024 Zanist. All rights reserved. | <Link to="/privacy" className="hover:text-white">Privacy Policy</Link> | <Link to="/terms" className="hover:text-white">Terms of Service</Link></p>
+          </div>
+          
+          {/* Additional Bolt Badge in Footer */}
+          <div className="flex items-center space-x-4">
+            <span className="text-xs text-gray-500">Powered by</span>
+            <a
+              href="https://bolt.new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-1 text-xs text-gray-400 hover:text-white transition-colors"
+            >
+              <Zap className="w-3 h-3" />
+              <span>Bolt</span>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
