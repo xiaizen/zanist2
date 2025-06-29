@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { Eye, EyeOff, BookOpen, AlertCircle, ArrowLeft } from 'lucide-react';
+import { Eye, EyeOff, AlertCircle, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
+import ZanistLogo from '../components/ZanistLogo';
 
 interface LoginForm {
   email: string;
@@ -93,11 +94,10 @@ const AuthPage: React.FC = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.2, type: "spring" }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full mb-4"
+            className="mb-4"
           >
-            <BookOpen className="w-8 h-8 text-white" />
+            <ZanistLogo size="xl" color="red" showText={true} className="justify-center" />
           </motion.div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Zanist</h1>
           <p className="text-gray-600">
             {isLogin ? 'Hesabınıza giriş yapın' : 'Üyeliğinizi oluşturun'}
           </p>

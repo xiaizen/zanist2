@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ZanistLogo from './ZanistLogo';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <h3 className="text-xl font-bold">Zanist</h3>
+              <ZanistLogo size="md" color="white" showText={true} />
             </Link>
             <p className="text-gray-400 text-sm">
               Your trusted source for the latest scientific discoveries and research breakthroughs.

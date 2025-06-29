@@ -7,11 +7,11 @@ import {
   BarChart3, 
   Settings, 
   LogOut,
-  BookOpen,
   Home,
   FileText
 } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
+import ZanistLogo from './ZanistLogo';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -69,8 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             transition={{ delay: 0.2 }}
             className="flex items-center space-x-2"
           >
-            <BookOpen className="w-8 h-8 text-white" />
-            <span className="text-xl font-bold text-white">Zanist</span>
+            <ZanistLogo size="md" color="white" showText={true} />
           </motion.div>
         </div>
 

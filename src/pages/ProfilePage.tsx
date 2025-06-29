@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, User, Mail, Calendar, Shield, Edit, Save, X, BookOpen } from 'lucide-react';
+import { ArrowLeft, User, Mail, Calendar, Shield, Edit, Save, X } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
+import ZanistLogo from '../components/ZanistLogo';
 
 const ProfilePage: React.FC = () => {
   const { user, logout } = useAuth();
@@ -62,12 +63,7 @@ const ProfilePage: React.FC = () => {
               <span>Ana Sayfaya Dön</span>
             </Link>
             
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-r from-red-600 to-red-700 rounded-lg flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zanist</span>
-            </div>
+            <ZanistLogo size="md" color="red" showText={true} />
           </div>
         </div>
       </div>
