@@ -79,7 +79,6 @@ const HomePage: React.FC = () => {
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center space-x-2">
                 <h1 className="text-3xl font-bold">Zanist</h1>
-                <span className="bg-red-500 px-2 py-1 text-xs rounded">SCIENCE</span>
               </Link>
             </div>
             
@@ -370,12 +369,31 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Advertisement Placeholder */}
-            <div className="bg-gray-200 rounded shadow p-8 text-center">
-              <div className="text-gray-500">
-                <div className="text-sm font-medium mb-2">Advertisement</div>
-                <div className="text-xs">Your ad could be here</div>
+            {/* Zanist Advertisement */}
+            <div className="bg-gradient-to-br from-red-600 to-red-700 rounded shadow p-6 text-center text-white">
+              <div className="mb-4">
+                <h3 className="text-xl font-bold mb-2">Join Zanist Premium</h3>
+                <p className="text-red-100 text-sm">
+                  Get unlimited access to exclusive research papers, expert analysis, and early access to breakthrough discoveries.
+                </p>
               </div>
+              <div className="space-y-2 mb-4">
+                <div className="flex items-center justify-center text-sm">
+                  <span className="mr-2">✓</span>
+                  <span>Unlimited article access</span>
+                </div>
+                <div className="flex items-center justify-center text-sm">
+                  <span className="mr-2">✓</span>
+                  <span>Expert analysis & insights</span>
+                </div>
+                <div className="flex items-center justify-center text-sm">
+                  <span className="mr-2">✓</span>
+                  <span>Weekly research digest</span>
+                </div>
+              </div>
+              <button className="bg-white text-red-600 px-4 py-2 rounded font-medium hover:bg-red-50 transition-colors">
+                Start Free Trial
+              </button>
             </div>
 
             {/* Newsletter Signup */}

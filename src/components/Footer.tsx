@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
           <div>
             <Link to="/" className="flex items-center space-x-2 mb-4">
               <h3 className="text-xl font-bold">Zanist</h3>
-              <span className="bg-red-600 px-2 py-1 text-xs rounded">SCIENCE</span>
             </Link>
             <p className="text-gray-400 text-sm">
               Your trusted source for the latest scientific discoveries and research breakthroughs.

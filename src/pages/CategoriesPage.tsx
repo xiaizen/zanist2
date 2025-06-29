@@ -2,22 +2,26 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
+  Filter,
+  User,
+  MessageSquare,
+  ThumbsUp,
+  ThumbsDown,
+  Share2,
   BookOpen,
-  Users,
-  Award,
+  Calendar,
+  MapPin,
+  Star,
+  Quote,
   TrendingUp,
-  ChevronRight,
-  Atom,
-  Dna,
-  Brain,
-  Zap,
-  Leaf,
-  Rocket,
-  Microscope,
-  Globe
+  Eye,
+  Clock
 } from 'lucide-react';
+import { sampleEssays } from '../data/sampleEssays';
+import EssayDetail from '../components/EssayDetail';
 
 const CategoriesPage: React.FC = () => {
+  const [selectedEssay, setSelectedEssay] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
 
   // Category data with icons and detailed information
@@ -26,7 +30,6 @@ const CategoriesPage: React.FC = () => {
       id: 1,
       name: 'Quantum Physics',
       slug: 'quantum-physics',
-      icon: Atom,
       description: 'Explore the fundamental nature of matter and energy at the smallest scales.',
       articles: 156,
       contributors: 45,
@@ -48,7 +51,6 @@ const CategoriesPage: React.FC = () => {
       id: 2,
       name: 'Biotechnology',
       slug: 'biotechnology',
-      icon: Dna,
       description: 'Revolutionary advances in genetic engineering and biological systems.',
       articles: 203,
       contributors: 67,
@@ -70,7 +72,6 @@ const CategoriesPage: React.FC = () => {
       id: 3,
       name: 'Artificial Intelligence',
       slug: 'artificial-intelligence',
-      icon: Brain,
       description: 'Cutting-edge developments in machine learning and cognitive computing.',
       articles: 289,
       contributors: 89,
@@ -92,7 +93,6 @@ const CategoriesPage: React.FC = () => {
       id: 4,
       name: 'Renewable Energy',
       slug: 'renewable-energy',
-      icon: Zap,
       description: 'Sustainable energy solutions for a cleaner future.',
       articles: 178,
       contributors: 52,
@@ -114,7 +114,6 @@ const CategoriesPage: React.FC = () => {
       id: 5,
       name: 'Environmental Science',
       slug: 'environmental-science',
-      icon: Leaf,
       description: 'Research on climate change, conservation, and environmental protection.',
       articles: 234,
       contributors: 78,
@@ -136,7 +135,6 @@ const CategoriesPage: React.FC = () => {
       id: 6,
       name: 'Space Science',
       slug: 'space-science',
-      icon: Rocket,
       description: 'Exploration of the cosmos and space technology development.',
       articles: 145,
       contributors: 38,
@@ -158,7 +156,6 @@ const CategoriesPage: React.FC = () => {
       id: 7,
       name: 'Nanotechnology',
       slug: 'nanotechnology',
-      icon: Microscope,
       description: 'Engineering at the molecular and atomic scale.',
       articles: 167,
       contributors: 43,
@@ -180,7 +177,6 @@ const CategoriesPage: React.FC = () => {
       id: 8,
       name: 'Nuclear Physics',
       slug: 'nuclear-physics',
-      icon: Atom,
       description: 'Study of atomic nuclei and nuclear reactions.',
       articles: 123,
       contributors: 35,
@@ -216,6 +212,10 @@ const CategoriesPage: React.FC = () => {
     category.description.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  if (selectedEssay) {
+    return <EssayDetail essay={selectedEssay} onBack={() => setSelectedEssay(null)} />;
+  }
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
@@ -239,11 +239,11 @@ const CategoriesPage: React.FC = () => {
               <span>{categories.reduce((sum, cat) => sum + cat.articles, 0)} Total Articles</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Users className="w-4 h-4" />
+              <User className="w-4 h-4" />
               <span>{categories.reduce((sum, cat) => sum + cat.contributors, 0)} Contributors</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Award className="w-4 h-4" />
+              <Star className="w-4 h-4" />
               <span>{categories.reduce((sum, cat) => sum + cat.nobelPrizes, 0)} Nobel Prizes</span>
             </div>
           </div>
@@ -271,88 +271,80 @@ const CategoriesPage: React.FC = () => {
       {/* Categories Grid */}
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filteredCategories.map((category) => {
-            const IconComponent = category.icon;
-            return (
-              <Link
-                key={category.id}
-                to={`/category/${category.slug}`}
-                className="bg-white rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-              >
-                {/* Category Header */}
-                <div className="relative">
-                  <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-t-lg" />
-                  <div className="absolute top-4 left-4">
-                    <div className={`p-3 rounded-full ${colorClasses[category.color as keyof typeof colorClasses]} border-2`}>
-                      <IconComponent className="w-6 h-6" />
-                    </div>
+          {filteredCategories.map((category) => (
+            <Link
+              key={category.id}
+              to={`/category/${category.slug}`}
+              className="bg-white rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+            >
+              {/* Category Header */}
+              <div className="relative">
+                <img
+                  src={category.image}
+                  alt={category.name}
+                  className="w-full h-48 object-cover rounded-t-lg"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-t-lg" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <h3 className="text-xl font-bold text-white mb-1">{category.name}</h3>
+                </div>
+              </div>
+
+              {/* Category Content */}
+              <div className="p-6">
+                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                  {category.description}
+                </p>
+
+                {/* Statistics */}
+                <div className="grid grid-cols-3 gap-2 mb-4">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-600">{category.articles}</div>
+                    <div className="text-xs text-gray-500">Articles</div>
                   </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white mb-1">{category.name}</h3>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600">{category.contributors}</div>
+                    <div className="text-xs text-gray-500">Contributors</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-yellow-600">{category.nobelPrizes}</div>
+                    <div className="text-xs text-gray-500">Nobel Prizes</div>
                   </div>
                 </div>
 
-                {/* Category Content */}
-                <div className="p-6">
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">
-                    {category.description}
-                  </p>
-
-                  {/* Statistics */}
-                  <div className="grid grid-cols-3 gap-2 mb-4">
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-red-600">{category.articles}</div>
-                      <div className="text-xs text-gray-500">Articles</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-blue-600">{category.contributors}</div>
-                      <div className="text-xs text-gray-500">Contributors</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-lg font-bold text-yellow-600">{category.nobelPrizes}</div>
-                      <div className="text-xs text-gray-500">Nobel Prizes</div>
-                    </div>
-                  </div>
-
-                  {/* Top Universities */}
-                  <div className="mb-4">
-                    <h5 className="text-sm font-semibold text-gray-900 mb-2">Top Universities:</h5>
-                    <div className="flex flex-wrap gap-1">
-                      {category.topUniversities.map((uni, index) => (
-                        <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 text-xs rounded">
-                          {uni}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Recent Breakthroughs */}
-                  <div className="mb-4">
-                    <h5 className="text-sm font-semibold text-gray-900 mb-2">Recent Breakthroughs:</h5>
-                    <ul className="space-y-1">
-                      {category.recentBreakthroughs.slice(0, 2).map((breakthrough, index) => (
-                        <li key={index} className="text-xs text-gray-600 flex items-start">
-                          <span className="w-1 h-1 bg-red-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                          <span className="line-clamp-1">{breakthrough}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* Action */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-red-600 font-medium text-sm">Explore Category</span>
-                    <ChevronRight className="w-4 h-4 text-red-600" />
+                {/* Top Universities */}
+                <div className="mb-4">
+                  <h5 className="text-sm font-semibold text-gray-900 mb-2">Top Universities:</h5>
+                  <div className="flex flex-wrap gap-1">
+                    {category.topUniversities.map((uni, index) => (
+                      <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 text-xs rounded">
+                        {uni}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </Link>
-            );
-          })}
+
+                {/* Recent Breakthroughs */}
+                <div className="mb-4">
+                  <h5 className="text-sm font-semibold text-gray-900 mb-2">Recent Breakthroughs:</h5>
+                  <ul className="space-y-1">
+                    {category.recentBreakthroughs.slice(0, 2).map((breakthrough, index) => (
+                      <li key={index} className="text-xs text-gray-600 flex items-start">
+                        <span className="w-1 h-1 bg-red-600 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                        <span className="line-clamp-1">{breakthrough}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Action */}
+                <div className="flex items-center justify-between">
+                  <span className="text-red-600 font-medium text-sm">Explore Category</span>
+                  <span className="text-red-600">→</span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
 
         {/* Empty State */}
@@ -400,6 +392,36 @@ const CategoriesPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Zanist Premium Ad */}
+      <div className="bg-gradient-to-r from-red-600 to-red-700">
+        <div className="container mx-auto px-4 py-12 text-center text-white">
+          <h2 className="text-3xl font-bold mb-4">Unlock Premium Research Access</h2>
+          <p className="text-red-100 text-lg mb-8 max-w-2xl mx-auto">
+            Join Zanist Premium to access exclusive research papers, expert analysis, and early access to breakthrough discoveries from leading scientists worldwide.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 rounded-lg p-6">
+              <BookOpen className="w-8 h-8 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Unlimited Access</h3>
+              <p className="text-red-100 text-sm">Read all research papers without limits</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-6">
+              <User className="w-8 h-8 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Expert Analysis</h3>
+              <p className="text-red-100 text-sm">Get insights from leading researchers</p>
+            </div>
+            <div className="bg-white/10 rounded-lg p-6">
+              <TrendingUp className="w-8 h-8 mx-auto mb-3" />
+              <h3 className="font-semibold mb-2">Early Access</h3>
+              <p className="text-red-100 text-sm">Be first to read new discoveries</p>
+            </div>
+          </div>
+          <button className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors">
+            Start Free Trial
+          </button>
+        </div>
+      </div>
+
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
@@ -407,7 +429,6 @@ const CategoriesPage: React.FC = () => {
             <div>
               <Link to="/" className="flex items-center space-x-2 mb-4">
                 <h3 className="text-xl font-bold">Zanist</h3>
-                <span className="bg-red-600 px-2 py-1 text-xs rounded">SCIENCE</span>
               </Link>
               <p className="text-gray-400 text-sm">
                 Your trusted source for the latest scientific discoveries and research breakthroughs.
