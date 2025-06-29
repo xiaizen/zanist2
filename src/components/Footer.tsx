@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
             
             {/* Built with Bolt Badge */}
             <a
-              href="https://bolt.new"
+              href="https://bolt.new/?rid=j6o2xz"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
           <div className="flex items-center space-x-4">
             <span className="text-xs text-gray-500">Powered by</span>
             <a
-              href="https://bolt.new"
+              href="https://bolt.new/?rid=j6o2xz"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center space-x-1 text-xs text-gray-400 hover:text-white transition-colors"
