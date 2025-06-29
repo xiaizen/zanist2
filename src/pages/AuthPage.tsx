@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { Eye, EyeOff, AlertCircle, ArrowLeft } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
-import ZanistLogo from '../components/ZanistLogo';
 
 interface LoginForm {
   email: string;
@@ -96,7 +95,7 @@ const AuthPage: React.FC = () => {
             transition={{ delay: 0.2, type: "spring" }}
             className="mb-4"
           >
-            <ZanistLogo size="xl" color="red" showText={true} className="justify-center" />
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Zanist</h1>
           </motion.div>
           <p className="text-gray-600">
             {isLogin ? 'Hesabınıza giriş yapın' : 'Üyeliğinizi oluşturun'}

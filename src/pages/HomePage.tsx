@@ -22,7 +22,6 @@ import { useAuth } from '../hooks/useAuth';
 import { sampleEssays } from '../data/sampleEssays';
 import EssayDetail from '../components/EssayDetail';
 import Footer from '../components/Footer';
-import ZanistLogo from '../components/ZanistLogo';
 
 const HomePage: React.FC = () => {
   const { user } = useAuth();
@@ -80,7 +79,7 @@ const HomePage: React.FC = () => {
           <div className="flex items-center justify-between py-4 border-b border-red-500">
             <div className="flex items-center space-x-4">
               <Link to="/" className="flex items-center">
-                <ZanistLogo size="lg" color="white" showText={true} />
+                <h1 className="text-4xl font-bold">Zanist</h1>
               </Link>
             </div>
             
@@ -403,7 +402,6 @@ const HomePage: React.FC = () => {
             {/* Zanist Premium Ad */}
             <div className="bg-gradient-to-br from-red-600 to-red-700 rounded shadow p-6 text-center text-white">
               <div className="mb-4">
-                <ZanistLogo size="md" color="white" showText={false} className="justify-center mb-3" />
                 <h3 className="text-xl font-bold mb-2">Join Zanist Premium</h3>
                 <p className="text-red-100 text-sm">
                   Get unlimited access to exclusive research papers, expert analysis, and early access to breakthrough discoveries.

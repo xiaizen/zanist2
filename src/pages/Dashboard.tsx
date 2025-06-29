@@ -8,7 +8,12 @@ import {
   Plus,
   Calendar,
   Award,
-  BookOpen
+  BookOpen,
+  Settings,
+  Image,
+  Globe,
+  Database,
+  Shield
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StatsCard from '../components/StatsCard';
@@ -51,42 +56,55 @@ const Dashboard: React.FC = () => {
     }
   ];
 
-  const recentArticles = [
+  const quickActions = [
     {
-      id: '1',
-      title: 'Quantum Computing Breakthrough: New Algorithms Show Promise',
-      author: 'Dr. Sarah Chen',
-      university: 'MIT',
-      publishDate: '2024-01-15',
-      views: 2340,
-      status: 'published'
+      title: 'Add New Article',
+      description: 'Create and publish research articles',
+      icon: Plus,
+      color: 'bg-blue-500',
+      link: '/admin/articles',
+      action: 'create'
     },
     {
-      id: '2',
-      title: 'CRISPR 3.0: Stanford Scientists Achieve Unprecedented Precision',
-      author: 'Prof. Jennifer Martinez',
-      university: 'Stanford',
-      publishDate: '2024-01-14',
-      views: 1890,
-      status: 'published'
+      title: 'Manage Professors',
+      description: 'Add, edit, or remove professor profiles',
+      icon: Users,
+      color: 'bg-green-500',
+      link: '/admin/professors',
+      action: 'manage'
     },
     {
-      id: '3',
-      title: 'Revolutionary Solar Cell Design Achieves 47% Efficiency',
-      author: 'Dr. Michael Thompson',
-      university: 'Caltech',
-      publishDate: '2024-01-13',
-      views: 1567,
-      status: 'published'
+      title: 'Nobel Prize Winners',
+      description: 'Add new Nobel Prize winners',
+      icon: Award,
+      color: 'bg-yellow-500',
+      link: '/admin/nobel-prizes',
+      action: 'create'
+    },
+    {
+      title: 'Categories Management',
+      description: 'Create and organize research categories',
+      icon: BookOpen,
+      color: 'bg-purple-500',
+      link: '/admin/categories',
+      action: 'manage'
+    },
+    {
+      title: 'Site Settings',
+      description: 'Configure website settings and appearance',
+      icon: Settings,
+      color: 'bg-gray-500',
+      link: '/admin/site-settings',
+      action: 'configure'
+    },
+    {
+      title: 'Media Library',
+      description: 'Manage images, logos, and media files',
+      icon: Image,
+      color: 'bg-pink-500',
+      link: '/admin/media',
+      action: 'manage'
     }
-  ];
-
-  const topCategories = [
-    { name: 'Quantum Physics', articles: 25, growth: '+15%' },
-    { name: 'Biotechnology', articles: 22, growth: '+12%' },
-    { name: 'AI Research', articles: 18, growth: '+8%' },
-    { name: 'Renewable Energy', articles: 16, growth: '+20%' },
-    { name: 'Space Science', articles: 14, growth: '+5%' }
   ];
 
   return (
@@ -98,16 +116,25 @@ const Dashboard: React.FC = () => {
         className="flex items-center justify-between"
       >
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-gray-600 mt-1">Welcome back! Here's what's happening with Zanist.</p>
+          <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
+          <p className="text-gray-600 mt-1">Complete control over your Zanist website</p>
         </div>
-        <Link
-          to="/admin/articles"
-          className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg font-medium hover:from-red-700 hover:to-red-800 transition-all duration-200 flex items-center space-x-2"
-        >
-          <Plus className="w-4 h-4" />
-          <span>Add Essay</span>
-        </Link>
+        <div className="flex items-center space-x-3">
+          <Link
+            to="/admin/backup"
+            className="bg-gray-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors flex items-center space-x-2"
+          >
+            <Database className="w-4 h-4" />
+            <span>Backup Data</span>
+          </Link>
+          <Link
+            to="/admin/site-settings"
+            className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-2 rounded-lg font-medium hover:from-red-700 hover:to-red-800 transition-all duration-200 flex items-center space-x-2"
+          >
+            <Settings className="w-4 h-4" />
+            <span>Site Settings</span>
+          </Link>
+        </div>
       </motion.div>
 
       {/* Stats Grid */}
@@ -124,169 +151,141 @@ const Dashboard: React.FC = () => {
         ))}
       </div>
 
+      {/* Quick Actions */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+        className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
+      >
+        <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {quickActions.map((action, index) => {
+            const Icon = action.icon;
+            return (
+              <Link
+                key={index}
+                to={action.link}
+                className="group p-6 border border-gray-200 rounded-lg hover:border-red-300 hover:bg-red-50 transition-all duration-200"
+              >
+                <div className="flex items-center space-x-4">
+                  <div className={`w-12 h-12 ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
+                      {action.title}
+                    </h4>
+                    <p className="text-sm text-gray-600 mt-1">{action.description}</p>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </motion.div>
+
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Chart */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.5 }}
           className="lg:col-span-2"
         >
-          <Chart title="Article Views & Engagement" />
+          <Chart title="Website Analytics & Performance" />
         </motion.div>
 
         {/* Recent Activity */}
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.6 }}
         >
           <RecentActivity />
         </motion.div>
       </div>
 
-      {/* Recent Articles & Top Categories */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Recent Articles */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Recent Articles</h3>
-            <Link to="/admin/articles" className="text-red-600 hover:text-red-700 text-sm font-medium">
-              View All →
+      {/* Website Management Overview */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.7 }}
+        className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
+      >
+        <h3 className="text-lg font-semibold text-gray-900 mb-6">Website Management</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="text-center p-4 bg-blue-50 rounded-lg">
+            <FileText className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+            <div className="text-2xl font-bold text-blue-600">156</div>
+            <div className="text-sm text-gray-600">Research Articles</div>
+            <Link to="/admin/articles" className="text-blue-600 hover:text-blue-700 text-xs mt-1 block">
+              Manage →
             </Link>
           </div>
-          <div className="space-y-4">
-            {recentArticles.map((article, index) => (
-              <motion.div
-                key={article.id}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.7 + index * 0.1 }}
-                className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-sm font-medium text-gray-900 line-clamp-2">
-                    {article.title}
-                  </h4>
-                  <div className="flex items-center space-x-2 mt-1 text-xs text-gray-500">
-                    <span>{article.university}</span>
-                    <span>•</span>
-                    <span>{new Date(article.publishDate).toLocaleDateString()}</span>
-                    <span>•</span>
-                    <div className="flex items-center">
-                      <Eye className="w-3 h-3 mr-1" />
-                      <span>{article.views}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Top Categories */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-          className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
-        >
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold text-gray-900">Top Categories</h3>
-            <Link to="/categories" className="text-red-600 hover:text-red-700 text-sm font-medium">
-              View All →
+          
+          <div className="text-center p-4 bg-green-50 rounded-lg">
+            <Users className="w-8 h-8 text-green-600 mx-auto mb-2" />
+            <div className="text-2xl font-bold text-green-600">45</div>
+            <div className="text-sm text-gray-600">Professor Profiles</div>
+            <Link to="/admin/professors" className="text-green-600 hover:text-green-700 text-xs mt-1 block">
+              Manage →
             </Link>
           </div>
-          <div className="space-y-3">
-            {topCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, x: 10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.8 + index * 0.1 }}
-                className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors"
-              >
-                <div>
-                  <h4 className="text-sm font-medium text-gray-900">{category.name}</h4>
-                  <p className="text-xs text-gray-500">{category.articles} articles</p>
-                </div>
-                <div className="text-right">
-                  <span className="text-sm font-medium text-green-600">{category.growth}</span>
-                  <div className="text-xs text-gray-500">growth</div>
-                </div>
-              </motion.div>
-            ))}
+          
+          <div className="text-center p-4 bg-yellow-50 rounded-lg">
+            <Award className="w-8 h-8 text-yellow-600 mx-auto mb-2" />
+            <div className="text-2xl font-bold text-yellow-600">23</div>
+            <div className="text-sm text-gray-600">Nobel Prize Winners</div>
+            <Link to="/admin/nobel-prizes" className="text-yellow-600 hover:text-yellow-700 text-xs mt-1 block">
+              Manage →
+            </Link>
           </div>
-        </motion.div>
-      </div>
+          
+          <div className="text-center p-4 bg-purple-50 rounded-lg">
+            <BookOpen className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+            <div className="text-2xl font-bold text-purple-600">8</div>
+            <div className="text-sm text-gray-600">Research Categories</div>
+            <Link to="/admin/categories" className="text-purple-600 hover:text-purple-700 text-xs mt-1 block">
+              Manage →
+            </Link>
+          </div>
+        </div>
+      </motion.div>
 
-      {/* Quick Actions */}
+      {/* System Status */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8 }}
         className="bg-white rounded-lg shadow-sm p-6 border border-gray-200"
       >
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link
-            to="/admin/articles"
-            className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-red-300 hover:bg-red-50 transition-all duration-200 group"
-          >
-            <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center group-hover:bg-red-200 transition-colors">
-              <Plus className="w-5 h-5 text-red-600" />
-            </div>
+        <h3 className="text-lg font-semibold text-gray-900 mb-4">System Status</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="flex items-center space-x-3 p-3 bg-green-50 rounded-lg">
+            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
             <div>
-              <h4 className="font-medium text-gray-900">Add New Essay</h4>
-              <p className="text-sm text-gray-500">Create a new research article</p>
+              <div className="font-medium text-gray-900">Website Status</div>
+              <div className="text-sm text-green-600">Online & Operational</div>
             </div>
-          </Link>
-
-          <Link
-            to="/admin/users"
-            className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
-          >
-            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors">
-              <Users className="w-5 h-5 text-blue-600" />
-            </div>
+          </div>
+          
+          <div className="flex items-center space-x-3 p-3 bg-blue-50 rounded-lg">
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
             <div>
-              <h4 className="font-medium text-gray-900">Manage Users</h4>
-              <p className="text-sm text-gray-500">View and edit user accounts</p>
+              <div className="font-medium text-gray-900">Database</div>
+              <div className="text-sm text-blue-600">Connected & Synced</div>
             </div>
-          </Link>
-
-          <Link
-            to="/admin/analytics"
-            className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-green-300 hover:bg-green-50 transition-all duration-200 group"
-          >
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center group-hover:bg-green-200 transition-colors">
-              <TrendingUp className="w-5 h-5 text-green-600" />
-            </div>
+          </div>
+          
+          <div className="flex items-center space-x-3 p-3 bg-yellow-50 rounded-lg">
+            <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
             <div>
-              <h4 className="font-medium text-gray-900">View Analytics</h4>
-              <p className="text-sm text-gray-500">Check performance metrics</p>
+              <div className="font-medium text-gray-900">Last Backup</div>
+              <div className="text-sm text-yellow-600">2 hours ago</div>
             </div>
-          </Link>
-
-          <Link
-            to="/admin/settings"
-            className="flex items-center space-x-3 p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200 group"
-          >
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center group-hover:bg-purple-200 transition-colors">
-              <Award className="w-5 h-5 text-purple-600" />
-            </div>
-            <div>
-              <h4 className="font-medium text-gray-900">Site Settings</h4>
-              <p className="text-sm text-gray-500">Configure site preferences</p>
-            </div>
-          </Link>
+          </div>
         </div>
       </motion.div>
     </div>

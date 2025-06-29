@@ -8,10 +8,13 @@ import {
   Settings, 
   LogOut,
   Home,
-  FileText
+  FileText,
+  BookOpen,
+  Award,
+  Palette,
+  Globe
 } from 'lucide-react';
 import { useAuth } from '../hooks/useAuth';
-import ZanistLogo from './ZanistLogo';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -24,10 +27,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const menuItems = [
     { path: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
-    { path: '/admin/articles', icon: FileText, label: 'Makale Yönetimi' },
-    { path: '/admin/users', icon: Users, label: 'Kullanıcılar', adminOnly: true },
-    { path: '/admin/analytics', icon: BarChart3, label: 'Analitik' },
-    { path: '/admin/settings', icon: Settings, label: 'Ayarlar' },
+    { path: '/admin/articles', icon: FileText, label: 'Articles' },
+    { path: '/admin/professors', icon: Users, label: 'Professors' },
+    { path: '/admin/categories', icon: BookOpen, label: 'Categories' },
+    { path: '/admin/users', icon: Users, label: 'Users', adminOnly: true },
+    { path: '/admin/analytics', icon: BarChart3, label: 'Analytics' },
+    { path: '/admin/site-settings', icon: Palette, label: 'Site Settings' },
+    { path: '/admin/settings', icon: Settings, label: 'Account Settings' },
   ];
 
   const filteredMenuItems = menuItems.filter(item => 
@@ -69,7 +75,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             transition={{ delay: 0.2 }}
             className="flex items-center space-x-2"
           >
-            <ZanistLogo size="md" color="white" showText={true} />
+            <span className="text-2xl font-bold text-white">Zanist</span>
+            <span className="text-sm text-red-200">Admin</span>
           </motion.div>
         </div>
 
@@ -84,9 +91,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div>
               <p className="text-sm font-medium text-gray-900">{user?.name}</p>
               <p className="text-xs text-gray-500 capitalize">
-                {user?.role === 'admin' ? 'Yönetici' : 
-                 user?.role === 'moderator' ? 'Moderatör' : 
-                 'Editör'}
+                {user?.role === 'admin' ? 'Administrator' : 
+                 user?.role === 'moderator' ? 'Moderator' : 
+                 'Editor'}
               </p>
             </div>
           </div>
@@ -106,7 +113,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               className="flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900"
             >
               <Home className="w-5 h-5" />
-              <span className="font-medium">Ana Sayfa</span>
+              <span className="font-medium">View Website</span>
             </NavLink>
           </motion.div>
 
@@ -145,7 +152,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             className="flex items-center space-x-3 w-full px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg transition-colors duration-200"
           >
             <LogOut className="w-5 h-5" />
-            <span className="font-medium">Çıkış Yap</span>
+            <span className="font-medium">Logout</span>
           </button>
         </div>
       </div>

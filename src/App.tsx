@@ -23,6 +23,9 @@ import ArticlesPage from './pages/ArticlesPage';
 import UsersPage from './pages/UsersPage';
 import AnalyticsPage from './pages/AnalyticsPage';
 import SettingsPage from './pages/SettingsPage';
+import ProfessorsManagementPage from './pages/ProfessorsManagementPage';
+import SiteSettingsPage from './pages/SiteSettingsPage';
+import CategoriesManagementPage from './pages/CategoriesManagementPage';
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -47,6 +50,26 @@ const AdminRoutes: React.FC = () => {
           <ProtectedRoute adminOnly>
             <Layout>
               <ArticlesPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/professors"
+        element={
+          <ProtectedRoute adminOnly>
+            <Layout>
+              <ProfessorsManagementPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/categories"
+        element={
+          <ProtectedRoute adminOnly>
+            <Layout>
+              <CategoriesManagementPage />
             </Layout>
           </ProtectedRoute>
         }
@@ -77,6 +100,16 @@ const AdminRoutes: React.FC = () => {
           <ProtectedRoute adminOnly>
             <Layout>
               <SettingsPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/site-settings"
+        element={
+          <ProtectedRoute adminOnly>
+            <Layout>
+              <SiteSettingsPage />
             </Layout>
           </ProtectedRoute>
         }
