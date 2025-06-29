@@ -16,6 +16,7 @@ import AboutPage from './pages/AboutPage';
 import SocialPage from './pages/SocialPage';
 import AuthPage from './pages/AuthPage';
 import ProfilePage from './pages/ProfilePage';
+import ProfessorProfilePage from './pages/ProfessorProfilePage';
 import UnauthorizedPage from './pages/UnauthorizedPage';
 import Dashboard from './pages/Dashboard';
 import ArticlesPage from './pages/ArticlesPage';
@@ -111,6 +112,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/social" element={<SocialPage />} />
       <Route path="/auth/*" element={<AuthPage />} />
       <Route path="/unauthorized" element={<UnauthorizedPage />} />
+      <Route path="/professor/:professorId" element={<ProfessorProfilePage />} />
       
       {/* Protected Routes */}
       <Route

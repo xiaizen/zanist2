@@ -78,9 +78,9 @@ const HomePage: React.FC = () => {
           {/* Logo and Search Row */}
           <div className="flex items-center justify-between py-4 border-b border-red-500">
             <div className="flex items-center space-x-4">
-              <Link to="/" className="flex items-center space-x-2">
-                <BookOpen className="w-8 h-8 text-red-200" />
-                <h1 className="text-4xl font-bold">Zanist</h1>
+              <Link to="/" className="flex items-center space-x-3">
+                <BookOpen className="w-10 h-10 text-red-200" />
+                <h1 className="text-5xl font-bold">Zanist</h1>
               </Link>
             </div>
             
@@ -90,9 +90,9 @@ const HomePage: React.FC = () => {
                 <input
                   type="text"
                   placeholder="Search research, universities, professors..."
-                  className="px-4 py-3 text-gray-900 rounded-l-lg w-96 focus:outline-none text-base"
+                  className="px-6 py-4 text-gray-900 rounded-l-lg w-[500px] focus:outline-none text-base"
                 />
-                <button className="bg-red-500 px-6 py-3 rounded-r-lg hover:bg-red-400 transition-colors">
+                <button className="bg-red-500 px-8 py-4 rounded-r-lg hover:bg-red-400 transition-colors">
                   <Search className="w-5 h-5" />
                 </button>
               </div>
@@ -190,6 +190,9 @@ const HomePage: React.FC = () => {
                   alt={featuredEssay.title}
                   className="w-full h-80 object-cover cursor-pointer"
                   onClick={() => setSelectedEssay(featuredEssay)}
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=800';
+                  }}
                 />
                 <div className="absolute top-4 left-4">
                   <span className="bg-red-600 text-white px-3 py-1 text-sm font-medium rounded">
@@ -233,6 +236,9 @@ const HomePage: React.FC = () => {
                           alt={news.title}
                           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105 cursor-pointer"
                           onClick={() => setSelectedEssay(news)}
+                          onError={(e) => {
+                            e.currentTarget.src = 'https://images.pexels.com/photos/3825572/pexels-photo-3825572.jpeg?auto=compress&cs=tinysrgb&w=800';
+                          }}
                         />
                         <div className="absolute top-3 left-3">
                           <span className="bg-red-600 text-white px-2 py-1 text-xs font-medium rounded">
@@ -314,6 +320,9 @@ const HomePage: React.FC = () => {
                         alt={news.title}
                         className="w-16 h-12 object-cover rounded cursor-pointer"
                         onClick={() => setSelectedEssay(news)}
+                        onError={(e) => {
+                          e.currentTarget.src = 'https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800';
+                        }}
                       />
                       <div className="flex-1">
                         <h4 

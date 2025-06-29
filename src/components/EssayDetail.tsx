@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, MapPin, Calendar, Share2, Bookmark, User, ExternalLink, Tag } from 'lucide-react';
 import { Essay } from '../types/Essay';
+import { professors } from '../data/professorsData';
 
 interface EssayDetailProps {
   essay: Essay;
@@ -8,6 +10,13 @@ interface EssayDetailProps {
 }
 
 const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
+  // Find the professor who contributed to this research
+  const contributingProfessor = professors.find(prof => 
+    prof.name.toLowerCase().includes(essay.professor.toLowerCase()) ||
+    prof.currentUniversity === essay.university ||
+    essay.professor.toLowerCase().includes(prof.name.split(' ')[1]?.toLowerCase() || '')
+  );
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
@@ -85,7 +94,7 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                     <div className="flex items-center space-x-2 mb-2">
                       <ExternalLink className="w-4 h-4 text-blue-600" />
-                      <span className="font-medium text-blue-900">Original Research</span>
+                      <span className="font-medium text-blue-900">Original Research Paper</span>
                     </div>
                     <a 
                       href={essay.referenceLink} 
@@ -95,6 +104,46 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
                     >
                       {essay.referenceLink}
                     </a>
+                    <p className="text-xs text-blue-700 mt-2">
+                      Click to access the peer-reviewed research paper and detailed methodology
+                    </p>
+                  </div>
+                )}
+
+                {/* Contributing Professor */}
+                {contributingProfessor && (
+                  <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                    <div className="flex items-center space-x-2 mb-3">
+                      <User className="w-4 h-4 text-green-600" />
+                      <span className="font-medium text-green-900">Lead Researcher</span>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <img
+                        src={contributingProfessor.photo}
+                        alt={contributingProfessor.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div className="flex-1">
+                        <Link 
+                          to={`/professor/${contributingProfessor.id}`}
+                          className="font-semibold text-green-900 hover:text-green-700 transition-colors"
+                        >
+                          {contributingProfessor.name}
+                        </Link>
+                        <div className="text-sm text-green-700">
+                          {contributingProfessor.title} at {contributingProfessor.currentUniversity}
+                        </div>
+                        <div className="text-xs text-green-600 mt-1">
+                          {contributingProfessor.stats.totalPublications} publications • {contributingProfessor.stats.totalCitations.toLocaleString()} citations
+                        </div>
+                      </div>
+                      <Link 
+                        to={`/professor/${contributingProfessor.id}`}
+                        className="text-green-600 hover:text-green-700 text-sm font-medium"
+                      >
+                        View Profile →
+                      </Link>
+                    </div>
                   </div>
                 )}
 
@@ -103,7 +152,7 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
                   <div className="mb-6">
                     <div className="flex items-center space-x-2 mb-3">
                       <Tag className="w-4 h-4 text-gray-600" />
-                      <span className="font-medium text-gray-900">Tags</span>
+                      <span className="font-medium text-gray-900">Research Keywords</span>
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {essay.tags.map((tag, index) => (
@@ -117,7 +166,7 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
 
                 {/* Article Summary */}
                 <div className="bg-gray-50 p-6 rounded mb-8">
-                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Summary</h2>
+                  <h2 className="text-xl font-semibold text-gray-900 mb-3">Research Summary</h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     {essay.summary}
                   </p>
@@ -169,18 +218,50 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
                 Research Team
               </div>
               <div className="p-4">
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                    <User className="w-6 h-6 text-red-600" />
-                  </div>
+                {contributingProfessor ? (
                   <div>
-                    <h4 className="font-medium text-gray-900">{essay.professor}</h4>
-                    <p className="text-sm text-gray-600">{essay.university}</p>
+                    <div className="flex items-center space-x-3 mb-3">
+                      <img
+                        src={contributingProfessor.photo}
+                        alt={contributingProfessor.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div>
+                        <Link 
+                          to={`/professor/${contributingProfessor.id}`}
+                          className="font-medium text-gray-900 hover:text-red-600 transition-colors"
+                        >
+                          {contributingProfessor.name}
+                        </Link>
+                        <p className="text-sm text-gray-600">{contributingProfessor.currentUniversity}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-3">
+                      {contributingProfessor.bio.substring(0, 150)}...
+                    </p>
+                    <Link 
+                      to={`/professor/${contributingProfessor.id}`}
+                      className="text-red-600 hover:text-red-700 text-sm font-medium"
+                    >
+                      View Full Profile →
+                    </Link>
                   </div>
-                </div>
-                <p className="text-sm text-gray-600">
-                  Leading researcher in {essay.category.toLowerCase()} with extensive experience in cutting-edge scientific research.
-                </p>
+                ) : (
+                  <div>
+                    <div className="flex items-center space-x-3 mb-3">
+                      <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                        <User className="w-6 h-6 text-red-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-gray-900">{essay.professor}</h4>
+                        <p className="text-sm text-gray-600">{essay.university}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-600">
+                      Leading researcher in {essay.category.toLowerCase()} with extensive experience in cutting-edge scientific research.
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -204,12 +285,31 @@ const EssayDetail: React.FC<EssayDetailProps> = ({ essay, onBack }) => {
               </div>
             </div>
 
-            {/* Advertisement */}
-            <div className="bg-gray-200 rounded shadow p-8 text-center">
-              <div className="text-gray-500">
-                <div className="text-sm font-medium mb-2">Advertisement</div>
-                <div className="text-xs">Your ad could be here</div>
+            {/* Zanist Premium Ad */}
+            <div className="bg-gradient-to-br from-red-600 to-red-700 rounded shadow p-6 text-center text-white">
+              <div className="mb-4">
+                <h3 className="text-lg font-bold mb-2">Zanist Premium</h3>
+                <p className="text-red-100 text-sm">
+                  Access exclusive research papers and expert analysis from leading scientists worldwide.
+                </p>
               </div>
+              <div className="space-y-1 mb-4 text-sm">
+                <div className="flex items-center justify-center">
+                  <span className="mr-2">✓</span>
+                  <span>Unlimited access</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <span className="mr-2">✓</span>
+                  <span>Expert insights</span>
+                </div>
+                <div className="flex items-center justify-center">
+                  <span className="mr-2">✓</span>
+                  <span>Early access</span>
+                </div>
+              </div>
+              <button className="bg-white text-red-600 px-4 py-2 rounded font-medium hover:bg-red-50 transition-colors text-sm">
+                Upgrade Now
+              </button>
             </div>
 
             {/* Newsletter */}
