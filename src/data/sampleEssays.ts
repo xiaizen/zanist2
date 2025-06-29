@@ -124,6 +124,7 @@ The research team is working with industry partners to scale up production and e
     publishDate: '2024-01-13',
     readTime: 5
   },
+  // Add research from more universities
   {
     id: '4',
     title: 'AI Discovers New Antibiotic Compound Through Deep Learning',
@@ -219,6 +220,138 @@ Large-scale deployment could remove gigatons of CO2 from the atmosphere annually
     tags: ['carbon capture', 'climate change', 'catalysis', 'environmental technology'],
     publishDate: '2024-01-10',
     readTime: 5
+  },
+  // Add research from additional universities
+  {
+    id: '7',
+    title: 'Smart City Revolution: NUS Develops AI-Powered Urban Management System',
+    summary: 'Singapore researchers create comprehensive platform for optimizing city operations.',
+    content: `# Smart City Revolution: NUS Develops AI-Powered Urban Management System
+
+National University of Singapore researchers have developed an integrated AI system that can optimize traffic flow, energy consumption, and waste management across entire urban areas.
+
+## Comprehensive Urban Intelligence
+
+The system uses machine learning to analyze real-time data from thousands of sensors throughout Singapore, making instant adjustments to city infrastructure.
+
+## Key Features
+
+- Traffic optimization reducing congestion by 35%
+- Energy savings of up to 25% in public buildings
+- Predictive maintenance for urban infrastructure
+- Real-time air quality monitoring and response
+
+## Global Applications
+
+Cities worldwide are expressing interest in implementing similar systems.`,
+    imageUrl: 'https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800',
+    category: 'Artificial Intelligence',
+    university: 'NUS',
+    professor: 'Dr. Wei Lin',
+    referenceLink: 'https://doi.org/10.1016/j.cities.2024.01.012',
+    tags: ['smart cities', 'urban planning', 'AI', 'sustainability'],
+    publishDate: '2024-01-09',
+    readTime: 6
+  },
+  {
+    id: '8',
+    title: 'Earthquake Prediction Breakthrough: University of Tokyo Develops Early Warning System',
+    summary: 'New seismic analysis technology provides up to 60 seconds advance warning.',
+    content: `# Earthquake Prediction Breakthrough: University of Tokyo Develops Early Warning System
+
+University of Tokyo researchers have created an advanced earthquake prediction system that can provide up to 60 seconds of warning before major seismic events.
+
+## Advanced Seismic Analysis
+
+The system combines traditional seismometers with AI-powered pattern recognition to detect the subtle P-waves that precede destructive S-waves.
+
+## Life-Saving Potential
+
+Even 10-20 seconds of warning can:
+- Stop elevators at the nearest floor
+- Shut down gas lines automatically
+- Alert emergency services
+- Give people time to take cover
+
+## Implementation
+
+The system is being tested across Japan's earthquake-prone regions.`,
+    imageUrl: 'https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpg?auto=compress&cs=tinysrgb&w=800',
+    category: 'Engineering',
+    university: 'UTokyo',
+    professor: 'Prof. Hiroshi Tanaka',
+    referenceLink: 'https://doi.org/10.1785/0220240001',
+    tags: ['earthquake prediction', 'seismology', 'early warning', 'disaster prevention'],
+    publishDate: '2024-01-08',
+    readTime: 5
+  },
+  {
+    id: '9',
+    title: 'Autonomous Vehicle Safety: University of Michigan Achieves Zero-Accident Testing',
+    summary: 'Comprehensive testing program demonstrates unprecedented safety in self-driving cars.',
+    content: `# Autonomous Vehicle Safety: University of Michigan Achieves Zero-Accident Testing
+
+University of Michigan researchers have completed a 1-million-mile autonomous vehicle testing program with zero accidents, marking a significant milestone in self-driving car safety.
+
+## Comprehensive Testing
+
+The Mcity testing facility provided controlled environments for testing various scenarios:
+- Urban intersections
+- Highway merging
+- Weather conditions
+- Pedestrian interactions
+
+## Safety Innovations
+
+Key safety features include:
+- 360-degree sensor fusion
+- Predictive behavior modeling
+- Emergency override systems
+- Real-time decision making
+
+## Industry Impact
+
+Major automakers are adopting the safety protocols developed at Michigan.`,
+    imageUrl: 'https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800',
+    category: 'Engineering',
+    university: 'UMich',
+    professor: 'Dr. Sarah Johnson',
+    referenceLink: 'https://doi.org/10.1109/TITS.2024.01234',
+    tags: ['autonomous vehicles', 'safety', 'transportation', 'AI'],
+    publishDate: '2024-01-07',
+    readTime: 6
+  },
+  {
+    id: '10',
+    title: 'Space Telescope Innovation: Johns Hopkins Develops Next-Generation Imaging',
+    summary: 'New telescope technology promises to revolutionize deep space observation.',
+    content: `# Space Telescope Innovation: Johns Hopkins Develops Next-Generation Imaging
+
+Johns Hopkins University researchers have developed revolutionary telescope imaging technology that could detect Earth-like planets around distant stars with unprecedented clarity.
+
+## Advanced Optics
+
+The new system uses:
+- Adaptive optics for atmospheric correction
+- Coronagraph technology to block starlight
+- Ultra-sensitive detectors
+- AI-enhanced image processing
+
+## Exoplanet Discovery
+
+This technology could identify potentially habitable worlds and analyze their atmospheres for signs of life.
+
+## Future Missions
+
+NASA is considering the technology for future space telescope missions.`,
+    imageUrl: 'https://images.pexels.com/photos/2156/sky-earth-space-working.jpg?auto=compress&cs=tinysrgb&w=800',
+    category: 'Space Science',
+    university: 'JHU',
+    professor: 'Dr. Maria Santos',
+    referenceLink: 'https://doi.org/10.1088/1538-3873/ac1234',
+    tags: ['space telescope', 'exoplanets', 'astronomy', 'imaging'],
+    publishDate: '2024-01-06',
+    readTime: 7
   }
 ];
 

@@ -369,7 +369,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
 
-            {/* Zanist Advertisement */}
+            {/* Zanist Premium Ad */}
             <div className="bg-gradient-to-br from-red-600 to-red-700 rounded shadow p-6 text-center text-white">
               <div className="mb-4">
                 <h3 className="text-xl font-bold mb-2">Join Zanist Premium</h3>
