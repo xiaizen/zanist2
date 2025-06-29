@@ -46,7 +46,7 @@ export const top50Universities: University[] = [
     students: 11500,
     founded: 1861,
     website: 'mit.edu',
-    logo: 'https://images.pexels.com/photos/207692/pexels-photo-207692.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/MIT_logo.svg/200px-MIT_logo.svg.png',
     description: 'Leading institution in technology, engineering, and scientific research.',
     specialties: ['Engineering', 'Computer Science', 'Physics', 'Economics'],
     latestResearch: [
@@ -81,7 +81,7 @@ export const top50Universities: University[] = [
     students: 17000,
     founded: 1885,
     website: 'stanford.edu',
-    logo: 'https://images.pexels.com/photos/1595391/pexels-photo-1595391.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Seal_of_Leland_Stanford_Junior_University.svg/200px-Seal_of_Leland_Stanford_Junior_University.svg.png',
     description: 'Premier research university known for innovation and entrepreneurship.',
     specialties: ['Computer Science', 'Medicine', 'Business', 'Engineering'],
     latestResearch: [
@@ -116,7 +116,7 @@ export const top50Universities: University[] = [
     students: 23000,
     founded: 1636,
     website: 'harvard.edu',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Harvard_University_coat_of_arms.svg/200px-Harvard_University_coat_of_arms.svg.png',
     description: 'Oldest institution of higher education in the United States.',
     specialties: ['Medicine', 'Law', 'Business', 'Liberal Arts'],
     latestResearch: [
@@ -151,7 +151,7 @@ export const top50Universities: University[] = [
     students: 2200,
     founded: 1891,
     website: 'caltech.edu',
-    logo: 'https://images.pexels.com/photos/2041540/pexels-photo-2041540.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Caltech_logo.svg/200px-Caltech_logo.svg.png',
     description: 'World-renowned science and engineering research university.',
     specialties: ['Physics', 'Astronomy', 'Engineering', 'Chemistry'],
     latestResearch: [
@@ -186,7 +186,7 @@ export const top50Universities: University[] = [
     students: 24000,
     founded: 1096,
     website: 'ox.ac.uk',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Oxford-University-Circlet.svg/200px-Oxford-University-Circlet.svg.png',
     description: 'One of the oldest and most prestigious universities in the world.',
     specialties: ['Medicine', 'Literature', 'Philosophy', 'History'],
     latestResearch: [
@@ -206,7 +206,6 @@ export const top50Universities: University[] = [
       email: 'enquiries@ox.ac.uk'
     }
   },
-  // Continue with more universities...
   {
     id: '6',
     name: 'University of Cambridge',
@@ -222,7 +221,7 @@ export const top50Universities: University[] = [
     students: 21000,
     founded: 1209,
     website: 'cam.ac.uk',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/University_of_Cambridge_coat_of_arms_official.svg/200px-University_of_Cambridge_coat_of_arms_official.svg.png',
     description: 'Historic university with cutting-edge research across all disciplines.',
     specialties: ['Mathematics', 'Physics', 'Engineering', 'Natural Sciences'],
     latestResearch: [
@@ -257,7 +256,7 @@ export const top50Universities: University[] = [
     students: 22000,
     founded: 1855,
     website: 'ethz.ch',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/ETH_Zurich_Logo_black.svg/200px-ETH_Zurich_Logo_black.svg.png',
     description: 'Leading European university for technology and natural sciences.',
     specialties: ['Engineering', 'Computer Science', 'Mathematics', 'Physics'],
     latestResearch: [
@@ -292,7 +291,7 @@ export const top50Universities: University[] = [
     students: 42000,
     founded: 1826,
     website: 'ucl.ac.uk',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/UCL_logo.svg/200px-UCL_logo.svg.png',
     description: 'London\'s leading multidisciplinary university.',
     specialties: ['Medicine', 'Engineering', 'Architecture', 'Social Sciences'],
     latestResearch: [
@@ -327,7 +326,7 @@ export const top50Universities: University[] = [
     students: 17000,
     founded: 1907,
     website: 'imperial.ac.uk',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Imperial_College_London_crest.svg/200px-Imperial_College_London_crest.svg.png',
     description: 'Science, engineering, medicine and business university.',
     specialties: ['Engineering', 'Medicine', 'Natural Sciences', 'Business'],
     latestResearch: [
@@ -362,7 +361,7 @@ export const top50Universities: University[] = [
     students: 16000,
     founded: 1890,
     website: 'uchicago.edu',
-    logo: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=400',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/University_of_Chicago_shield.svg/200px-University_of_Chicago_shield.svg.png',
     description: 'Private research university known for rigorous academics.',
     specialties: ['Economics', 'Physics', 'Medicine', 'Social Sciences'],
     latestResearch: [
@@ -382,7 +381,6 @@ export const top50Universities: University[] = [
       email: 'info@uchicago.edu'
     }
   }
-  // Add 40 more universities to reach top 50...
 ];
 
 export interface Country {
@@ -400,7 +398,7 @@ export const countries: Country[] = [
   {
     name: 'United States',
     slug: 'united-states',
-    flag: '🇺🇸',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/200px-Flag_of_the_United_States.svg.png',
     universities: 25,
     totalResearch: 15420,
     nobelPrizes: 892,
@@ -410,7 +408,7 @@ export const countries: Country[] = [
   {
     name: 'United Kingdom',
     slug: 'united-kingdom',
-    flag: '🇬🇧',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Flag_of_the_United_Kingdom.svg/200px-Flag_of_the_United_Kingdom.svg.png',
     universities: 8,
     totalResearch: 6240,
     nobelPrizes: 342,
@@ -420,7 +418,7 @@ export const countries: Country[] = [
   {
     name: 'Switzerland',
     slug: 'switzerland',
-    flag: '🇨🇭',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/200px-Flag_of_Switzerland.svg.png',
     universities: 3,
     totalResearch: 1890,
     nobelPrizes: 45,
@@ -430,7 +428,7 @@ export const countries: Country[] = [
   {
     name: 'Germany',
     slug: 'germany',
-    flag: '🇩🇪',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Germany.svg/200px-Flag_of_Germany.svg.png',
     universities: 4,
     totalResearch: 3420,
     nobelPrizes: 156,
@@ -440,7 +438,7 @@ export const countries: Country[] = [
   {
     name: 'Canada',
     slug: 'canada',
-    flag: '🇨🇦',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/200px-Flag_of_Canada_%28Pantone%29.svg.png',
     universities: 3,
     totalResearch: 2180,
     nobelPrizes: 67,
@@ -450,7 +448,7 @@ export const countries: Country[] = [
   {
     name: 'Australia',
     slug: 'australia',
-    flag: '🇦🇺',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/200px-Flag_of_Australia_%28converted%29.svg.png',
     universities: 2,
     totalResearch: 1560,
     nobelPrizes: 34,
@@ -460,7 +458,7 @@ export const countries: Country[] = [
   {
     name: 'Singapore',
     slug: 'singapore',
-    flag: '🇸🇬',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/200px-Flag_of_Singapore.svg.png',
     universities: 2,
     totalResearch: 980,
     nobelPrizes: 12,
@@ -470,7 +468,7 @@ export const countries: Country[] = [
   {
     name: 'Japan',
     slug: 'japan',
-    flag: '🇯🇵',
+    flag: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/200px-Flag_of_Japan.svg.png',
     universities: 3,
     totalResearch: 2340,
     nobelPrizes: 89,

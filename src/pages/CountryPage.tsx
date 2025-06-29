@@ -83,7 +83,7 @@ const CountryPage: React.FC = () => {
           </div>
           
           <div className="flex items-center space-x-4 mb-4">
-            <span className="text-6xl">{country.flag}</span>
+            <img src={country.flag} alt={`${country.name} flag`} className="w-16 h-12 object-cover rounded" />
             <div>
               <h1 className="text-4xl font-bold mb-2">{country.name}</h1>
               <p className="text-red-100 text-lg max-w-3xl">
@@ -212,11 +212,13 @@ const CountryPage: React.FC = () => {
             <div key={university.id} className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
               {/* University Header */}
               <div className="relative">
-                <img
-                  src={university.logo}
-                  alt={university.name}
-                  className="w-full h-48 object-cover rounded-t-lg"
-                />
+                <div className="w-full h-48 bg-gray-100 rounded-t-lg flex items-center justify-center p-4">
+                  <img
+                    src={university.logo}
+                    alt={university.name}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
                 <div className="absolute top-4 left-4">
                   <span className="bg-red-600 text-white px-3 py-1 text-sm font-bold rounded">
                     #{university.ranking}
@@ -321,7 +323,9 @@ const CountryPage: React.FC = () => {
                 to={`/country/${otherCountry.slug}`}
                 className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors group"
               >
-                <div className="text-3xl mb-2">{otherCountry.flag}</div>
+                <div className="mb-2">
+                  <img src={otherCountry.flag} alt={`${otherCountry.name} flag`} className="w-12 h-8 object-cover mx-auto rounded" />
+                </div>
                 <h3 className="font-semibold text-gray-900 group-hover:text-red-600 transition-colors">
                   {otherCountry.name}
                 </h3>

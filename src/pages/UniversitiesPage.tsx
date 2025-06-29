@@ -191,11 +191,13 @@ const UniversitiesPage: React.FC = () => {
                 <div key={university.id} className="bg-white rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
                   {/* University Header */}
                   <div className="relative">
-                    <img
-                      src={university.logo}
-                      alt={university.name}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
+                    <div className="w-full h-48 bg-gray-100 rounded-t-lg flex items-center justify-center p-4">
+                      <img
+                        src={university.logo}
+                        alt={university.name}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
                     <div className="absolute top-4 left-4">
                       <span className="bg-red-600 text-white px-3 py-1 text-sm font-bold rounded">
                         #{university.ranking}
@@ -298,7 +300,9 @@ const UniversitiesPage: React.FC = () => {
                 className="bg-white rounded-lg shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
               >
                 <div className="p-6 text-center">
-                  <div className="text-6xl mb-4">{country.flag}</div>
+                  <div className="mb-4">
+                    <img src={country.flag} alt={`${country.name} flag`} className="w-16 h-12 object-cover mx-auto rounded" />
+                  </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-red-600 transition-colors">
                     {country.name}
                   </h3>
