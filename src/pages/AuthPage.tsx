@@ -395,9 +395,8 @@ const AuthPage: React.FC = () => {
           <div className="mt-8 p-4 bg-gray-50 rounded-lg">
             <p className="text-sm text-gray-600 mb-3 font-medium">Demo Hesapları:</p>
             <div className="text-xs text-gray-500 space-y-1">
-              <p><strong>Yönetici:</strong> admin@example.com / password123</p>
-              <p><strong>Moderatör:</strong> moderator@example.com / password123</p>
-              <p><strong>Üye:</strong> member@example.com / password123</p>
+            
+            <p><strong>Üye:</strong> member@example.com / password123</p>
               <p><strong>Ziyaretçi:</strong> user@example.com / password123</p>
             </div>
           </div>
