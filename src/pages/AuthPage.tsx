@@ -40,7 +40,7 @@ const AuthPage: React.FC = () => {
       await login(data.email, data.password);
       navigate(from, { replace: true });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Giriş başarısız');
+      setError(err instanceof Error ? err.message : 'Login failed');
     } finally {
       setIsLoading(false);
     }
@@ -48,7 +48,7 @@ const AuthPage: React.FC = () => {
 
   const onRegisterSubmit = async (data: RegisterForm) => {
     if (data.password !== data.confirmPassword) {
-      setError('Şifreler eşleşmiyor');
+      setError('Passwords do not match');
       return;
     }
 
@@ -63,7 +63,7 @@ const AuthPage: React.FC = () => {
       });
       navigate(from, { replace: true });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Kayıt başarısız');
+      setError(err instanceof Error ? err.message : 'Registration failed');
     } finally {
       setIsLoading(false);
     }
@@ -83,7 +83,7 @@ const AuthPage: React.FC = () => {
             className="inline-flex items-center space-x-2 text-gray-600 hover:text-red-600 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Ana Sayfaya Dön</span>
+            <span>Zanist</span>
           </Link>
         </motion.div>
 
@@ -98,7 +98,7 @@ const AuthPage: React.FC = () => {
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Zanist</h1>
           </motion.div>
           <p className="text-gray-600">
-            {isLogin ? 'Hesabınıza giriş yapın' : 'Üyeliğinizi oluşturun'}
+            {isLogin ? '	Sign in to your account' : 'Create your account'}
           </p>
         </div>
 
@@ -124,7 +124,7 @@ const AuthPage: React.FC = () => {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Giriş Yap
+              	Sign In
             </button>
             <button
               onClick={() => {
@@ -139,7 +139,7 @@ const AuthPage: React.FC = () => {
                   : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              Üye Ol
+              	Sign Up
             </button>
           </div>
 
@@ -167,21 +167,21 @@ const AuthPage: React.FC = () => {
                 {/* Email Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    E-posta Adresi
+                    	Email Address
                   </label>
                   <input
                     {...loginForm.register('email', {
-                      required: 'E-posta adresi gerekli',
+                      required: 'Email is required',
                       pattern: {
                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: 'Geçersiz e-posta formatı'
+                        message: 'Invalid email format'
                       }
                     })}
                     type="email"
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                       loginForm.formState.errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
-                    placeholder="E-posta adresinizi girin"
+                    placeholder="Enter your email address"
                   />
                   {loginForm.formState.errors.email && (
                     <p className="mt-1 text-sm text-red-600">
@@ -193,22 +193,22 @@ const AuthPage: React.FC = () => {
                 {/* Password Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Şifre
+                    password
                   </label>
                   <div className="relative">
                     <input
                       {...loginForm.register('password', {
-                        required: 'Şifre gerekli',
+                        required: 'Password is required',
                         minLength: {
                           value: 8,
-                          message: 'Şifre en az 8 karakter olmalı'
+                          message: 'Password must be at least 8 characters'
                         }
                       })}
                       type={showPassword ? 'text' : 'password'}
                       className={`w-full px-4 py-3 pr-12 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                         loginForm.formState.errors.password ? 'border-red-300' : 'border-gray-300'
                       }`}
-                      placeholder="Şifrenizi girin"
+                      placeholder="Enter your password"
                     />
                     <button
                       type="button"
@@ -236,10 +236,10 @@ const AuthPage: React.FC = () => {
                   {isLoading ? (
                     <div className="flex items-center justify-center space-x-2">
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      <span>Giriş yapılıyor...</span>
+                      <span>Signing in...</span>
                     </div>
                   ) : (
-                    'Giriş Yap'
+                    'Sign In'
                   )}
                 </motion.button>
               </motion.form>
@@ -255,21 +255,21 @@ const AuthPage: React.FC = () => {
                 {/* Name Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Ad Soyad
+                    Full Name
                   </label>
                   <input
                     {...registerForm.register('name', {
-                      required: 'Ad soyad gerekli',
+                      required: 'Full name is required',
                       minLength: {
                         value: 2,
-                        message: 'Ad soyad en az 2 karakter olmalı'
+                        message: 'Full name must be at least 2 characters'
                       }
                     })}
                     type="text"
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                       registerForm.formState.errors.name ? 'border-red-300' : 'border-gray-300'
                     }`}
-                    placeholder="Ad soyadınızı girin"
+                    placeholder="	Enter your full name"
                   />
                   {registerForm.formState.errors.name && (
                     <p className="mt-1 text-sm text-red-600">
@@ -281,21 +281,21 @@ const AuthPage: React.FC = () => {
                 {/* Email Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    E-posta Adresi
+                    Email Address
                   </label>
                   <input
                     {...registerForm.register('email', {
-                      required: 'E-posta adresi gerekli',
+                      required: '	Email is required',
                       pattern: {
                         value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: 'Geçersiz e-posta formatı'
+                        message: 'Invalid email format'
                       }
                     })}
                     type="email"
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                       registerForm.formState.errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
-                    placeholder="E-posta adresinizi girin"
+                    placeholder="Enter your email address"
                   />
                   {registerForm.formState.errors.email && (
                     <p className="mt-1 text-sm text-red-600">
@@ -307,22 +307,22 @@ const AuthPage: React.FC = () => {
                 {/* Password Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Şifre
+                    password
                   </label>
                   <div className="relative">
                     <input
                       {...registerForm.register('password', {
-                        required: 'Şifre gerekli',
+                        required: 'Password is required',
                         minLength: {
                           value: 8,
-                          message: 'Şifre en az 8 karakter olmalı'
+                          message: 'Password must be at least 8 characters'
                         }
                       })}
                       type={showPassword ? 'text' : 'password'}
                       className={`w-full px-4 py-3 pr-12 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                         registerForm.formState.errors.password ? 'border-red-300' : 'border-gray-300'
                       }`}
-                      placeholder="Şifrenizi girin"
+                      placeholder="Enter your password"
                     />
                     <button
                       type="button"
@@ -342,18 +342,18 @@ const AuthPage: React.FC = () => {
                 {/* Confirm Password Field */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Şifre Tekrar
+                    Confirm Password
                   </label>
                   <div className="relative">
                     <input
                       {...registerForm.register('confirmPassword', {
-                        required: 'Şifre tekrarı gerekli'
+                        required: 'Password confirmation is required'
                       })}
                       type={showConfirmPassword ? 'text' : 'password'}
                       className={`w-full px-4 py-3 pr-12 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors ${
                         registerForm.formState.errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
                       }`}
-                      placeholder="Şifrenizi tekrar girin"
+                      placeholder="Re-enter your password"
                     />
                     <button
                       type="button"
@@ -381,10 +381,10 @@ const AuthPage: React.FC = () => {
                   {isLoading ? (
                     <div className="flex items-center justify-center space-x-2">
                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                      <span>Üyelik oluşturuluyor...</span>
+                      <span>Creating your account...</span>
                     </div>
                   ) : (
-                    'Üye Ol'
+                    'Sign Up'
                   )}
                 </motion.button>
               </motion.form>
@@ -393,11 +393,10 @@ const AuthPage: React.FC = () => {
 
           {/* Demo Credentials */}
           <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-600 mb-3 font-medium">Demo Hesapları:</p>
+            <p className="text-sm text-gray-600 mb-3 font-medium">Demo Accounts:</p>
             <div className="text-xs text-gray-500 space-y-1">
-            
-            <p><strong>Üye:</strong> member@example.com / password123</p>
-              <p><strong>Ziyaretçi:</strong> user@example.com / password123</p>
+              <p><strong>Member:</strong> member@example.com / password123</p>
+              <p><strong>Guest:</strong> user@example.com / password123</p>
             </div>
           </div>
         </motion.div>
