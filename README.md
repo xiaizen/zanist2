@@ -24,7 +24,6 @@ A comprehensive scientific research platform featuring the latest breakthroughs 
 - **Lucide React** for icons
 
 ### Backend
-- **Supabase** for database and authentication
 - **Express.js** API server
 - **PostgreSQL** with Row Level Security
 - **Node.js** runtime
@@ -55,17 +54,13 @@ A comprehensive scientific research platform featuring the latest breakthroughs 
    ```
    Fill in your Supabase credentials and other configuration.
 
-4. **Set up Supabase**
-   - Create a new Supabase project
-   - Run the migrations in `supabase/migrations/`
-   - Update your `.env` file with Supabase credentials
 
-5. **Seed the database (optional)**
+4. **Seed the database (optional)**
    ```bash
    npm run seed
    ```
 
-6. **Start the development servers**
+5. **Start the development servers**
    ```bash
    # Start both frontend and backend
    npm run start:full
@@ -94,8 +89,6 @@ zanist/
 │   ├── utils/             # Utility functions
 │   ├── scripts/           # Database seeding scripts
 │   └── docs/              # API documentation
-├── supabase/              # Database migrations
-│   └── migrations/        # SQL migration files
 └── public/                # Static assets
 ```
 
@@ -147,11 +140,6 @@ npm run build
 ```
 
 ### Environment Variables
-
-Required environment variables:
-- `VITE_SUPABASE_URL` - Supabase project URL
-- `VITE_SUPABASE_ANON_KEY` - Supabase anonymous key
-- `VITE_SUPABASE_SERVICE_ROLE_KEY` - Supabase service role key
 
 Optional for full functionality:
 - `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS` - Email configuration
